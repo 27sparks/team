@@ -1,0 +1,24 @@
+%section#news
+  %h1.section_header News-Übersicht
+  %article
+    %table
+      %tr
+        %th Überschrift
+        %th Inhalt
+        %th Bild
+        %th
+        %th
+        %th
+
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= preview(post.body, 90)
+          %td= image_tag post.image_url(:tiny).to_s
+          %td= link_to 'zeigen', post
+          %td= link_to 'bearbeiten', edit_post_path(post)
+          %td= link_to 'Löschen', post, confirm: 'Sind Sie sicher?', method: :delete
+
+    %br
+
+    = link_to 'Nachricht erstellen', new_post_path

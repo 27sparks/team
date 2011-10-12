@@ -1,0 +1,10 @@
+%p#notice= notice 
+%section#fahrer
+  %h1.section_header= @rider.name 
+  %article.fahrer
+    =image_tag @rider.image_url(:slide).to_s 
+    %h1.article_header= link_to @rider.name, rider_url
+    %p= @rider.klasse
+    %p= simple_format(@rider.description)
+     
+    = link_to 'zurück', team_path

@@ -1,0 +1,29 @@
+= form_for(@rider) do |f|
+  - if @rider.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@rider.errors.count, "error")
+        prohibited this post from being saved:
+
+      %ul
+        - @rider.errors.full_messages.each do |msg|
+          %li= msg 
+
+  .field
+    = f.label 'Name'
+    %br
+    = f.text_field :name 
+  .field
+    = f.label 'Klasse'
+    %br
+    = f.text_field :klasse
+  .field
+    = f.label 'Beschreibung'
+    %br
+    = f.text_area :description
+  .field
+    = f.label 'Bild'
+    %br
+    = f.file_field :image 
+  .actions
+    = f.submit

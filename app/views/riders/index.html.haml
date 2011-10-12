@@ -1,0 +1,26 @@
+%section#fahrer
+  %h1.section_header Fahrer-Übersicht
+  %article
+    %table
+      %tr
+        %th Name
+        %th Klasse
+        %th Beschreibung
+        %th Bild
+        %th
+        %th
+        %th
+
+      - @riders.each do |rider|
+        %tr
+          %td= rider.name
+          %td= rider.klasse
+          %td= preview(rider.description, 90)
+          %td= image_tag rider.image_url(:tiny).to_s
+          %td= link_to 'Anzeigen', rider
+          %td= link_to 'Bearbeiten', edit_rider_path(rider)
+          %td= link_to 'Löschen', rider, confirm: 'Sind Sie sicher?', method: :delete
+
+    %br
+
+    = link_to 'Neuer Fahrer', new_rider_path

@@ -1,0 +1,10 @@
+%p#notice= notice 
+%section#news
+  %h1.section_header News
+  %article.news_item
+    =image_tag @post.image_url(:thumb).to_s 
+    %h1.article_header= link_to @post.title, post_url
+    .date= date2dmy(@post.created_at.to_date)
+    %p= simple_format(@post.body)
+     
+    = link_to 'zurück', news_path

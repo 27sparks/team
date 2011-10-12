@@ -1,0 +1,189 @@
+/**** Variables ****/
+
+$dark: #555;
+
+/**** Basic Layout ****/
+
+#wrap {
+	width: 980px; 
+	margin: 20px auto;
+}
+#header {
+	display:block;
+	background: #000;
+	background: url('header1.jpg'), #000;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	padding: 10px 5px 5px;
+	box-shadow: 0px 0px 10px #aaa;
+	margin: 0 0 20px 0;
+
+	.team{
+		float:right;
+		margin-right: 40px;
+	}
+	h1 {
+		clear:right;
+		float:right;
+		margin-right: 245px;
+	}
+	#menu_bar{
+		clear:both;
+	}
+	.social{
+		float:right;
+		margin: 0 10px 0 0;
+	}
+	#menu{
+		width: 700px;
+		background: #111;
+		text-align: left;
+		padding: 7px 0px 5px 5px;
+		margin: 60px 0px 5px 10px;
+		border-radius: 5px;
+		border-right: none;
+		border-bottom: solid 2px #d00;
+		box-shadow: -5px 0px 10px #333;
+
+		.logo {
+			float: left;
+			margin: -4px 10px 0 0;
+		}
+	}
+
+}
+#left {
+	display:block;
+	float:left;
+	width: 720px;
+	#content{
+		clear: both;
+	}
+	
+}
+#footer {
+	clear: both;
+	background: #eee;
+	border-radius: 5px;
+	border: solid 2px #fff;
+	margin-top: 20px;
+	text-align: center;
+	padding: 10px;
+	box-shadow: 0px 0px 10px #aaa;
+
+}	
+
+
+#right{
+	display: block;
+	width: 220px;
+	padding: 10px;
+	float: right;
+	background: #eee;
+	box-shadow: 0px 0px 10px #aaa;
+	border-radius: 5px;
+	border: solid 2px #fff;
+	margin-bottom: 20px;
+	#sidebar{
+	}
+}
+#sparks {
+	text-align: center;
+	margin: 20px;
+	a {
+		color: #d00;
+		text-decoration: none;
+		font-size: 14px;
+	}
+}
+
+
+/**** Content Layout ***/
+
+#content{
+	h1.section_header {
+		background: #eee;
+		border-radius: 5px;
+		border: solid 2px #fff;
+		padding: 5px 10px;
+		box-shadow: 0px 0px 10px #aaa;
+		margin:0 0 0px 0;
+			
+	}
+	table{
+		margin: 0 10px 0 10px;
+	}
+}
+
+/**** Post Layout ****/
+
+article {
+	clear: both;
+	padding: 20px 10px 20px 0px;
+	img {
+		float: left;
+		display: block;
+		border-radius: 5px;
+		margin: 0px 10px 10px 0px;
+	}
+}
+
+/**** Fahrer layout ****/
+
+.fahrer {
+	display: block;
+	float: left;
+	width: 160px;
+	text-align: center;
+	margin: 20px 20px 0 0;
+	img {
+		border-radius: 5px;
+	}
+}
+
+/**** Slides Layout ****/
+#rotator_wrapper{
+	height: 400px;
+	overflow: hidden;
+	background: #000;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+.slide_image {
+	position: relative;
+	margin: 0 0 20px 0;
+	.image img {
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px #aaa;
+	}
+}
+.slide_tag {
+ 	position: absolute;
+ 	width: 660px;
+ 	background: #ddd;
+ 	bottom: 30px;
+ 	right: 5px;
+ 	border-bottom: 3px solid #d00;
+ 	border-radius: 5px;
+ 	padding-left: 10px;
+ 	opacity: 0.9;
+ 	box-shadow: 0 0 10px #000;
+ 	.logo {
+ 		text-align: center;
+ 		width: 160px;
+ 		height: 30px;
+ 		padding: 3px;
+ 		background: #222;
+ 		float: right;
+ 		img {
+ 			margin:0 5px -2px 0;
+ 		}
+ 	}
+ }
+/**** Admin Layout ***/
+
+#admin {
+	li {
+		margin: 10px 0;
+	}
+}

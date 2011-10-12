@@ -1,0 +1,8 @@
+%section#news
+  %h1.section_header News
+  - @posts.each do |post|
+    %article.news_item
+      =image_tag post.image_url(:thumb).to_s 
+      %h1.article_header= link_to post.title, post_url(post.id)
+      %p= simple_format(preview(post.body))
+      = link_to 'mehr', post_url(post.id)
