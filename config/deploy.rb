@@ -1,13 +1,42 @@
-set :application, "Team2011"
-set :repository,  "http://nordmeyer.name/apps/team2011"
+set :user, 'root'
+set :domain, 'nordmeyer.name'
+set :application, "team"
 
-set :scm, :git
+#file paths
+set :repository,  "#{user}@#{domain}:git/#{application}.git"
+set :deploy_to, "/var/www/apps/#{application}"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+role :web, domain                      # Your HTTP server, Apache/etc
+role :app, domain                          # This may be the same as your `Web` server
+role :db,  domain, :primary => true # This is where Rails migrations will run
+
+# options
+
+set :deploy_via, :remote_cache
+set :scm, 'git'
+set :branch, 'master'
+set :scm_verbose, true
+set :use_sudo, false
+
+
+namespace :deploy do
+	desc "cause Passenger to initiate a restart"
+	task :restart do
+		run "touch #{current_path}/tmp/restart.txt"
+	end
+	desc "reload the db with seed data"
+	task :seed do
+		run "cd #{current_path}; rake db:seed RAILS_ENV=production"
+	end
+end
+
+after "deploy:update_code", :bundle_install
+desc "install the necessary prerequisites"
+task :bundle_install, :roles => :app do
+	run "cd #{release_path} && bundle install"
+end
+
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
