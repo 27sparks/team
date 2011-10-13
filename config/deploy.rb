@@ -19,6 +19,7 @@ set :scm, "git"
 set :user, "deploy"  # The server's user for deploys
 set :scm_passphrase, "hatepunk"  # The deploy user's password
 
+set :rake "/usr/local/rvm/gems/ruby-1.9.2-p290/bin/rake"
 set :deploy_via, :remote_cache
 set :branch, 'master'
 set :scm_verbose, true
