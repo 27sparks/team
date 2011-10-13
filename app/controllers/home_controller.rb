@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  skip_before_filter :authorize, :only => [:index, :coming]
+
   def index
   	@posts = Post.all
   	@title = "Home"

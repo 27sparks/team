@@ -1,4 +1,6 @@
 class RidersController < ApplicationController
+    skip_before_filter :authorize, :only => [:show, :list]
+
   def new
     @rider = Rider.new
 

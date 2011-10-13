@@ -13,8 +13,13 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 # options
 
+default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :repository, "git@github.com:27sparks/team.git"  # Your clone URL
+set :scm, "git"
+set :user, "deployer"  # The server's user for deploys
+set :scm_passphrase, "hatepunk"  # The deploy user's password
+
 set :deploy_via, :remote_cache
-set :scm, 'git'
 set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false

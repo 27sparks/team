@@ -1,6 +1,8 @@
 Team2011::Application.routes.draw do
   resources :posts
   resources :riders
+  resources :users
+  resources :sessions
 
   get "home/index"
   
@@ -14,6 +16,10 @@ Team2011::Application.routes.draw do
   match 'team' => 'riders#list'
   match 'admin' => 'home#admin'
   match 'coming' => 'home#coming'
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
+  match 'register' => 'users#new'
+
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)

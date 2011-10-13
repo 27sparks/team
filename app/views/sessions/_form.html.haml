@@ -1,0 +1,13 @@
+- if (session[:user_id])
+  %li= link_to 'Administrator-Seite', admin_path
+  %li= link_to 'abmelden', logout_url
+- else
+  = form_tag sessions_path do
+    .field
+      = label_tag 'Name'
+      = text_field_tag :name, params[:name], :size => "30"
+    .field
+      = label_tag 'Passwort'
+      = password_field_tag :password
+    .actions
+      = submit_tag "Anmelden"  
