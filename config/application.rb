@@ -1,6 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "rails/test_unit/railtie"
+require "mongoid/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -44,5 +48,11 @@ module Team2011
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators do |g|
+      g.orm :mongoid
+      g.template_engine :haml # this could be :haml or whatever
+      g.test_framework :test_unit, :fixture => false # this could be :rpsec or whatever
+    end
   end
 end

@@ -1,6 +1,9 @@
-class Rider < ActiveRecord::Base
-	attr_accessible :name, :klasse, :description, :image
-	validates :name, :presence => true
+class Rider
+  include Mongoid::Document
+  include Mongoid::Paperclip
 
-	mount_uploader :image, ImageUploader
+  attr_accessible :name, :klasse, :description, :image
+  validates :name, :presence => true
+
+  has_mongoid_attached_file :image
 end

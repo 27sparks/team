@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authorize
+ # before_filter :authorize
   protect_from_forgery
 
   private
@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
   protected 
 
     def authorize
-      unless User.find_by_id(session[:user_id])
+      unless User.where(:id => params[:id]).first
+
       	redirect_to login_path, :notice => "Bitte anmelden!"
       end
     end

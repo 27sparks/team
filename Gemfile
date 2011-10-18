@@ -25,8 +25,10 @@ gem 'rake'
 gem 'jquery-rails'
 gem 'haml'
 gem 'rmagick'
-gem 'carrierwave'
 gem 'capistrano'
+gem "mongoid", "~> 2.3"
+gem "bson_ext", "~> 1.4"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 
 # To use ActiveModel has_secure_password
