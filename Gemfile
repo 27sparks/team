@@ -27,7 +27,6 @@ gem 'haml'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'capistrano'
-gem 'heroku'
 
 
 # To use ActiveModel has_secure_password
@@ -48,5 +47,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
 end
