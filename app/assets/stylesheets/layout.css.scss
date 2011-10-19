@@ -1,6 +1,9 @@
 /**** Variables ****/
 
 $dark: #555;
+$darkborder: #ccc;
+$lightborder: #fff;
+$shadow: #aaa;
 
 /**** Basic Layout ****/
 
@@ -15,8 +18,8 @@ $dark: #555;
 	background-repeat: no-repeat;
 	border-radius: 5px;
 	padding: 10px 5px 5px;
-	box-shadow: 0px 0px 10px #aaa;
-	margin: 0 0 20px 0;
+	box-shadow: 0px 0px 10px $shadow;
+	margin: 0 0 15px 0;
 
 	.team{
 		float:right;
@@ -33,6 +36,10 @@ $dark: #555;
 	.social{
 		float:right;
 		margin: 0 10px 0 0;
+		img {
+			border: 2px solid #444;
+			border-radius: 3px;
+		}
 	}
 	#menu{
 		width: 700px;
@@ -65,11 +72,15 @@ $dark: #555;
 	clear: both;
 	background: #eee;
 	border-radius: 5px;
-	border: solid 2px #fff;
+	border-top: solid 2px $lightborder;
+	border-left: solid 2px $lightborder;
+	border-right: solid 2px $darkborder;
+	border-bottom: solid 2px $darkborder;
+
 	margin-top: 20px;
 	text-align: center;
 	padding: 10px;
-	box-shadow: 0px 0px 10px #aaa;
+	box-shadow: 0px 0px 10px $shadow;
 
 }	
 
@@ -80,9 +91,12 @@ $dark: #555;
 	padding: 10px;
 	float: right;
 	background: #eee;
-	box-shadow: 0px 0px 10px #aaa;
+	box-shadow: 0px 0px 10px $shadow;
 	border-radius: 5px;
-	border: solid 2px #fff;
+	border-top: solid 2px $lightborder;
+	border-left: solid 2px $lightborder;
+	border-right: solid 2px $darkborder;
+	border-bottom: solid 2px $darkborder;
 	margin-bottom: 20px;
 	#sidebar{
 	}
@@ -104,9 +118,12 @@ $dark: #555;
 	h1.section_header {
 		background: #eee;
 		border-radius: 5px;
-		border: solid 2px #fff;
+		border-top: solid 2px $lightborder;
+		border-left: solid 2px $lightborder;
+		border-right: solid 2px $darkborder;
+		border-bottom: solid 2px $darkborder;
 		padding: 5px 10px;
-		box-shadow: 0px 0px 10px #aaa;
+		box-shadow: 0px 0px 10px $shadow;
 		margin:0 0 0px 0;
 			
 	}
@@ -140,7 +157,38 @@ article {
 		border-radius: 5px;
 	}
 }
-
+article.fahrer {
+	width: 708px;
+	min-height: 360px;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	box-shadow: 0 0 10px $shadow;
+	overflow: hidden;
+	margin-bottom: 20px;
+	.rider_image {
+		float: left;
+		display: block;
+		width: 240px;
+		margin: 0 0 0 20px
+	}
+	.rider_content {
+		text-align: left;
+		width: 400px;
+        min-height: 300px;
+		margin: 0 0 0 280px;
+		border-radius: 5px;
+		box-shadow: 0 0 10px #666;
+		padding: 10px;
+		background: #ddd;
+		opacity: 0.9;
+		li {
+		    min-height: 20px;
+		    em {
+		    	font-weight: bold;
+		    }
+		}
+	}
+}
 /**** Slides Layout ****/
 #rotator_wrapper{
 	height: 400px;
@@ -148,13 +196,15 @@ article {
 	background: #000;
 	margin-bottom: 20px;
 	border-radius: 5px;
+	box-shadow: 0px 0px 10px $shadow;
+
 }
 .slide_image {
 	position: relative;
 	margin: 0 0 20px 0;
 	.image img {
-		border-radius: 5px;
-		box-shadow: 0px 0px 10px #aaa;
+		border-radius: 4px;
+
 	}
 }
 .slide_tag {

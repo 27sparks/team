@@ -16,7 +16,7 @@
           %td= rider.name
           %td= rider.klasse
           %td= preview(rider.description, 90)
-          %td= image_tag rider.image_url(:tiny).to_s
+          %td= image_tag rider.image(:thumb).to_s
           %td= link_to 'Anzeigen', rider
           %td= link_to 'Bearbeiten', edit_rider_path(rider)
           %td= link_to 'Löschen', rider, confirm: 'Sind Sie sicher?', method: :delete

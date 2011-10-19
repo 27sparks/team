@@ -1,10 +1,22 @@
 %p#notice= notice 
 %section#fahrer
   %h1.section_header= @rider.name 
-  %article.fahrer
-    =image_tag @rider.image_url(:slide).to_s 
-    %h1.article_header= link_to @rider.name, rider_url
-    %p= @rider.klasse
-    %p= simple_format(@rider.description)
+  %article.fahrer{ :style => 'background-image: url(' + @rider.image(:back).to_s + ' )' }
+    .rider_image
+      =image_tag @rider.image(:medium).to_s
+    .rider_content
+      %ul
+        %li
+          Klasse: 
+          %em= @rider.klasse
+        %li
+          Verein:
+          %em= @rider.verein
+        %li
+          Geburtstag:
+          %em= @rider.geburtstag
+        %li
+          Erfolge:
+          %em= simple_format(@rider.description)
      
     = link_to 'zurück', team_path
