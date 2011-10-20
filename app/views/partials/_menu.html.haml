@@ -1,19 +1,14 @@
 #menu_bar
-  #social_bar
-    .social= link_to (image_tag ('twitter24.png')), coming_path
-    .social= link_to (image_tag ('facebook24.png')), coming_path
-    .social= link_to (image_tag ('google24.png')), coming_path
-    .social= link_to (image_tag ('rss24.png')), coming_path
   #menu
     .logo= link_to (image_tag 'LogoBerner.png'), root_url
     = link_to "Home", root_url
-    |
     = link_to "News", news_path
-    |
     = link_to "Team", team_path
-    |
     = link_to "Material", coming_path
-    |
     = link_to "Links", coming_path
-    |
     = link_to "Partners", coming_path
+    #social_bar
+      .social= link_to (image_tag ('twitter24.png')), coming_path
+      .social= link_to (image_tag ('facebook24.png')), coming_path
+      .social= link_to (image_tag ('google24.png')), coming_path
+      .social= link_to (image_tag ('rss24.png')), coming_path

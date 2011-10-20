@@ -13,12 +13,7 @@ body {
 }
 
 #header{ 
-	h1 a{
-		color: #ddd;
-		text-decoration: none;
-		font-size: 14px;
-		margin-right: 20px;
-	}
+
 	#menu {
 		a {
 			color: #eee;
@@ -35,7 +30,13 @@ body {
 #content{
 	h1.section_header {
 		font-size: 24px;
-		color: #666;
+		color: #444;
+		background-image: linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
+		background-image: -o-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
+		background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
+		background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
+		background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
+		border-radius: 5px;
 	}
 	h1.article_header{ 
 		a {
@@ -61,11 +62,13 @@ body {
 	}
 	.slide_tag{
 		font-size: 20px;
-		line-height: 36px;
 		color: #ddd;
+		.title {
+			line-height: 22px;
+		}
 		.logo {
 			font-size: 24px;
-			color: #ddd;
+			color: #d00;
 		}
 	}
 	.date{
