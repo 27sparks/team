@@ -23,7 +23,7 @@ body {
 		a {
 			color: #eee;
 			text-decoration: none;
-			font-size: 20px;
+			font-size: 18px;
 			margin-left: 10px;
 		}
 		a:hover {
@@ -60,10 +60,12 @@ body {
 		vertical-align: middle;
 	}
 	.slide_tag{
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 36px;
+		color: #ddd;
 		.logo {
-			color: #aaa;
+			font-size: 24px;
+			color: #ddd;
 		}
 	}
 	.date{
