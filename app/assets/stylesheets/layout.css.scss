@@ -1,55 +1,45 @@
 /**** Variables ****/
 
 $dark: #555;
-$darkborder: #ccc;
+$darkborder: #ddd;
 $lightborder: #fff;
-$shadow: #aaa;
+$shadow: #ccc;
 
 /**** Basic Layout ****/
 
 #wrap {
-	width: 980px; 
-	margin: 20px auto;
+	width: 1000px; 
+	margin: 10px auto;
 }
 #header {
 	display:block;
-	background: #000;
-	background: url('header1.jpg'), #000;
-	background-repeat: no-repeat;
-	border-radius: 5px;
-	padding: 10px 5px 5px;
-	box-shadow: 0px 0px 10px $shadow;
-	margin: 0 0 20px 0;
+	margin-bottom: 20px;
 
 	.team{
-		float:right;
+		float:left;
 		margin-right: 40px;
 	}
-	h1 {
-		clear:right;
+	#social_bar {
 		float:right;
-		margin-right: 245px;
-	}
-	#menu_bar{
-		clear:both;
+		width: 244px;
+		padding-top: 6px;
+		text-align:center;
 	}
 	.social{
-		float:right;
-		margin: 0 10px 0 0;
+		display: inline;
+		margin: 0px 5px 0 5px;
 		img {
 			border-radius: 4px;
 		}
 	}
 	#menu{
-		width: 700px;
+		width: 696px;
 		background: #111;
 		text-align: left;
-		padding: 7px 0px 5px 5px;
-		margin: 60px 0px 5px 10px;
+		padding: 7px 20px 5px 5px;
 		border-radius: 5px;
-		border-right: none;
 		border-bottom: solid 2px #d00;
-		box-shadow: -5px 0px 10px #333;
+		box-shadow: 0 0px 10px #333;
 
 		.logo {
 			float: left;
@@ -69,7 +59,7 @@ $shadow: #aaa;
 }
 #footer {
 	clear: both;
-	background: #eee;
+	background: #f6f6f6;
 	border-radius: 5px;
 	border-top: solid 2px $lightborder;
 	border-left: solid 2px $lightborder;
@@ -89,7 +79,7 @@ $shadow: #aaa;
 	width: 220px;
 	padding: 10px;
 	float: right;
-	background: #eee;
+	background: #f6f6f6;
 	box-shadow: 0px 0px 10px $shadow;
 	border-radius: 5px;
 	border-top: solid 2px $lightborder;
@@ -115,16 +105,8 @@ $shadow: #aaa;
 
 #content{
 	h1.section_header {
-		background: #eee;
-		border-radius: 5px;
-		border-top: solid 2px $lightborder;
-		border-left: solid 2px $lightborder;
-		border-right: solid 2px $darkborder;
 		border-bottom: solid 2px $darkborder;
-		padding: 5px 10px;
-		box-shadow: 0px 0px 10px $shadow;
-		margin:0 0 0px 0;
-			
+		padding: 0 0 5px 10px;	
 	}
 	table{
 		margin: 0 10px 0 10px;
@@ -193,7 +175,7 @@ article.fahrer {
 	height: 400px;
 	overflow: hidden;
 	background: #000;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-bottom: 20px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px $shadow;
