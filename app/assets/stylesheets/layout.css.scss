@@ -182,33 +182,21 @@ article {
 }
 article.fahrer {
 	width: 708px;
-	min-height: 360px;
-	background-repeat: no-repeat;
-	border-radius: 5px;
-	box-shadow: 0 0 10px $shadow;
 	overflow: hidden;
 	margin-bottom: 20px;
 	.rider_image {
 		float: left;
 		display: block;
 		width: 240px;
-		margin: 0 0 0 20px
+		margin: 0 0 0 0px;
 	}
 	.rider_content {
 		text-align: left;
-		width: 400px;
+		width: 450px;
         min-height: 300px;
-		margin: 0 0 0 280px;
-		border-radius: 5px;
-		box-shadow: 0 0 10px #666;
+		margin: 0 0 0 240px;
 		padding: 10px;
-		background: #ddd;
-		background-image: linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
-		background-image: -o-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
-		background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
-		background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
-		background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(221,221,221) 0%, rgb(255,255,255) 81%);
-		opacity: 0.9;
+		
 		li {
 		    min-height: 20px;
 		    em {

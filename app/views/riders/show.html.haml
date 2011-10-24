@@ -1,7 +1,7 @@
 %p#notice= notice 
 %section#fahrer
   %h1.section_header= @rider.name 
-  %article.fahrer{ :style => 'background-image: url(' + @rider.image(:back).to_s + ' )' }
+  %article.fahrer
     .rider_image
       =image_tag @rider.image(:medium).to_s
     .rider_content
