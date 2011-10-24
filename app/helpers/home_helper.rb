@@ -1,5 +1,5 @@
 module HomeHelper
-  def preview (string, count = 700)
+  def preview (string, count = 300)
     # String::shorten (naiv)
 	# Autor: Martin Labuschin
 	# Erstellt am 29.Juli 2007

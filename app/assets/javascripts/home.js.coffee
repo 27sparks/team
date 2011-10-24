@@ -3,11 +3,12 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ -> 
-  $('.slide:first').siblings('.slide').hide()
+  $('#rotator.slide:first').siblings('.slide').hide()
+
   speed = 2000
   pause = false  
-  current_slide = $('.slide:first')
-
+  news_slide = $('#rotator.slide:first')
+  
   slideshow = (slide) ->
     setTimeout( => 
       if slide.next('.slide').length
@@ -19,4 +20,4 @@ $ ->
       slideshow next_slide
     , speed*2)
 
-  slideshow(current_slide)
+  slideshow(news_slide)

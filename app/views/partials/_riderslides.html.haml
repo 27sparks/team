@@ -1,0 +1,10 @@
+#riderslideshow
+  %h1.section_header Team
+  %ul#rotator
+    - @riders.each do |rider|
+      %li.riderslide{ :id => rider.name }
+        .slide_image
+          .image= link_to (image_tag rider.image(:medium).to_s), rider_url(rider.id)
+          .name_tag
+            = image_tag 'LogoBerner.png'
+            = rider.name
