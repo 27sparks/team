@@ -1,12 +1,12 @@
 #rotator_wrapper
   %ul#rotator
     - @posts.take(3).each do |post|
-      %li.slide{ :id => post.title }
+      %li.slide{ :id => post.title.to_s }
         .slide_image
           .image= link_to (image_tag post.image(:slide).to_s), post_url(post.id)
           .slide_tag
             .title
-              = post.title
+              = post.title.to_s
             .logo
               = image_tag 'LogoBerner.png'
               News
