@@ -3,13 +3,14 @@
 $dark: #555;
 $darkborder: #ddd;
 $lightborder: #fff;
-$shadow: #ccc;
+$shadow: #222;
 
 /**** Basic Layout ****/
 
 #wrap {
 	width: 1000px; 
 	margin: 20px auto;
+	padding: 0 20px;
 }
 #header {
 	display:block;
@@ -27,32 +28,17 @@ $shadow: #ccc;
 			border-radius: 3px;
 		}
 		img:hover {
-			box-shadow: 2px 2px 10px #ddd;
 			-webkit-transform:rotate(5deg);
-
 		}
 	}
 	#menu{
 		width: 976px;
-		background-image: linear-gradient(bottom, #222222 0%, #666666 100%);
-		background-image: -o-linear-gradient(bottom, #222222 0%, #666666 100%);
-		background-image: -moz-linear-gradient(bottom, #222222 0%, #666666 100%);
-		background-image: -webkit-linear-gradient(bottom, #222222 0%, #666666 100%);
-		background-image: -ms-linear-gradient(bottom, #222222 0%, #666666 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0, #222222),
-			color-stop(1, #666666)
-		);
+		background: #000;
 
 				text-align: left;
 		padding: 7px 20px 8px 5px;
 		border-radius: 5px;
 		border-bottom: solid 3px #c00;
-		box-shadow: 0 0px 10px #999;
 
 		.logo {
 			float: left;
@@ -76,27 +62,23 @@ $shadow: #ccc;
 }
 #footer {
 	clear: both;
-	background: #f6f6f6;
+	background: #000;
+	border-bottom: solid 3px #c00;
 	border-radius: 5px;
-	border-top: solid 2px $lightborder;
-	border-left: solid 2px $lightborder;
-	border-right: solid 2px $darkborder;
-	border-bottom: solid 2px $darkborder;
-
 	margin-top: 20px;
 	text-align: center;
 	padding: 10px;
-	box-shadow: 0px 0px 10px $shadow;
-
 }	
 
 
 #right{
 	display: block;
 	width: 220px;
-	padding: 0px;
+	padding: 10px;
+	border-radius: 5px;
 	float: right;
 	margin-bottom: 20px;
+	background: #fff;
 	img {
 		margin-bottom: 10px;
 	}
@@ -116,12 +98,18 @@ $shadow: #ccc;
 
 #content{
 	h1.section_header {
-		border-bottom: solid 2px $darkborder;
 		padding: 7px 0 5px 10px;	
+		margin-bottom: 20px;
+	}
+	h1.page_header {
+		padding: 7px 0 7px 10px;
 		margin-bottom: 20px;
 	}
 	table{
 		margin: 0 10px 0 10px;
+	}
+	.news_item {
+		margin-bottom: 80px;
 	}
 }
 
@@ -140,10 +128,19 @@ article {
 		float: left;
 		display: block;
 		border-radius: 5px;
-		margin: 0px 10px 0px 0px;
+		margin: 10px 10px 0px 0px;
 	}
 }
-
+#headlines {
+	clear: both;
+	margin-bottom: 20px;
+	padding: 10px;
+	background: #000;
+	border-radius:5px;
+	.headline {
+		margin-bottom: 5px;
+	}
+}
 /**** News Block ****/
 
 .news_block {
@@ -159,7 +156,7 @@ article {
 		border-radius: 5px;
 		margin: 0px 10px 0px 0px;
 	}
-	a {
+	h1 a {
 		size: 20px;
 		text-decoration: none;
 	}
@@ -242,20 +239,8 @@ article.fahrer {
 	padding:5px 10px;
 	color: #ddd;
 
-	background-image: linear-gradient(bottom, #222222 0%, #666666 100%);
-	background-image: -o-linear-gradient(bottom, #222222 0%, #666666 100%);
-	background-image: -moz-linear-gradient(bottom, #222222 0%, #666666 100%);
-	background-image: -webkit-linear-gradient(bottom, #222222 0%, #666666 100%);
-	background-image: -ms-linear-gradient(bottom, #222222 0%, #666666 100%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #222222),
-		color-stop(1, #666666)
-	);
-
+	background: #333;
+	opacity: 0.8
 }
 .slide_tag {
  	position: absolute;

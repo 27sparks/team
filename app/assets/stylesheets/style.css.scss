@@ -3,13 +3,13 @@
 $dark: #555;
 $darkborder: #ddd;
 $lightborder: #fff;
-$shadow: #ccc;
+$shadow: #222;
 
 
 body {
 	font-family: Helvetica, Arial, sansserif;
-	color: #222;
-	background: #fff;
+	color: #ddd;
+	background: #191919;
 	font-size: 12px;
 	p {
 		line-height: 14px;
@@ -17,6 +17,13 @@ body {
 	em {
 		margin-right: 20px;
 		font-weight: bold;
+	}
+	a {
+		color: #aaa;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #c00;
 	}
 }
 
@@ -28,8 +35,6 @@ body {
 			text-decoration: none;
 			font-size: 18px;
 			margin-left: 10px;
-			text-shadow: 0px 0px 2px #000;
-
 		}
 		a:hover {
 			color: #f00;
@@ -40,35 +45,28 @@ body {
 #content{
 	h1.section_header {
 		font-size: 24px;
-		color: #444;
-		background-image: linear-gradient(bottom, rgb(255,255,255) 100%, rgb(221,221,221) 0%);
-		background-image: -o-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(255,255,255) 100%);
-		background-image: -moz-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(255,255,255) 100%);
-		background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 100%, rgb(221,221,221) 0%);
-		background-image: -ms-linear-gradient(bottom, rgb(221,221,221) 0%, rgb(255,255,255) 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left top,
-			left bottom,
-			color-stop(0, rgb(255,255,255)),
-			color-stop(1, rgb(221,221,221))
-		);
+		color: #ddd;
+		background-color: #000;
+		border-bottom: solid 3px #c00;
+		border-radius: 5px;
+	}
+	h1.page_header {
+		font-size: 24px;
+		background-color: #000;
 		border-radius: 5px;
 	}
 	h1.article_header{ 
+		font-size: 24px;
+		padding: 0 0 5px 10px;
+	}
+	h1.block_header{
 		a {
-			font-size: 20px;
-			line-height: 24px;
-			color: #222;
-			text-decoration: none;
-		}
-		a:hover {
-			color: #000;
-			text-decoration: underline;
+			font-size: 14px;
 		}
 	}
-
+	p {
+		margin-top: 10px;
+	}
 	th {
 		font-weight: bold;
 		background: #eee;
@@ -97,7 +95,6 @@ body {
 }
 #footer {
 	a {
-		color: #222;
 		text-decoration:none;
 	}
 	a:hover {

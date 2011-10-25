@@ -1,8 +1,17 @@
 %section#news
   %h1.section_header News
-  - @posts.take(3).each do |post|
-    .news_block
-      =image_tag post.image(:thumb).to_s 
-      %h1.block_header= link_to post.title, post_url(post.id)
-      %p= simple_format(preview(post.body))
-      = link_to 'mehr', post_url(post.id)
+  #blocks
+    - @posts.take(3).each do |post|
+      .news_block
+        =image_tag post.image(:thumb).to_s 
+        %h1.block_header= link_to post.title, post_url(post.id)
+        %p= simple_format(preview(post.body))
+        = link_to 'mehr', post_url(post.id)
+  #headlines
+    - @posts.take(6).each do |post|
+      .headline
+        %ul
+          %li.block_header= link_to post.title, post_url(post.id)
+
+      
+      

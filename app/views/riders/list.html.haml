@@ -1,5 +1,5 @@
 %section#fahrer
-  %h1.section_header Team
+  %h1.page_header Team
   - @riders.each do |rider|
     .fahrer
       = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 

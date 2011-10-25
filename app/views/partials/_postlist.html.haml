@@ -1,5 +1,5 @@
 %section#news
-  %h1.section_header News
+  %h1.page_header News
   - @posts.each do |post|
     %article.news_item
       =image_tag post.image(:thumb).to_s 
