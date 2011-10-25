@@ -1,11 +1,13 @@
 class Post
   include Mongoid::Document
   include Mongoid::Paperclip
+  include Mongoid::Timestamps
 
   attr_accessible :title, :body, :image
   field :title, :type => String
   field :body, :type => String
   field :image_url, :type => String
+  field :user_id, :type => Integer
 
   validates :title, :presence => true
   validates :body, :presence => true

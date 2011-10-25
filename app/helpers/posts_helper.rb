@@ -1,5 +1,7 @@
 module PostsHelper
-  def date2dmy(d)      # International -> Deutsch, Rückgabe als String
-    return d.to_s.sub(/(\w+)-(\w+)-(\w+)/, '\\3.\\2.\\1')
+  def date2dmy(d)      
+    if d!=nil
+      return d.strftime("%d.%m.%Y")
+    end
   end
 end

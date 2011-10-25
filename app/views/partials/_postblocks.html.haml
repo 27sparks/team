@@ -3,15 +3,20 @@
   #blocks
     - @posts.take(3).each do |post|
       .news_block
-        =image_tag post.image(:thumb).to_s 
         %h1.block_header= link_to post.title, post_url(post.id)
+        =image_tag post.image(:thumb).to_s 
         %p= simple_format(preview(post.body))
         = link_to 'mehr', post_url(post.id)
   #headlines
     - @posts.take(6).each do |post|
       .headline
         %ul
-          %li.block_header= link_to post.title, post_url(post.id)
-
+          %li.block_header
+            %span.date= date2dmy(post.created_at)
+            = link_to post.title, post_url(post.id)
+            -if post.user
+              %span.name
+                von
+                =post.user.name
       
       
