@@ -1,7 +1,16 @@
 %p#notice= notice 
 %section#news
   %article.news_item
-    %h1.article_header= @post.title 
+    %h1.article_header= @post.title
+    .namedate 
+      - if (@post.user && @post.created_at)
+        von
+        = @post.user.name
+        am
+        = date2dmy(@post.created_at)
+        - if @post.updated_at
+          , Update am
+          = date2dmy(@post.updated_at)
     =image_tag @post.image(:medium).to_s 
     %p= simple_format(@post.body)
      
