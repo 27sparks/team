@@ -9,7 +9,7 @@ $shadow: #222;
 body {
 	font-family: Helvetica, Arial, sansserif;
 	color: #ddd;
-	background: #191919;
+	background: #141414;
 	font-size: 12px;
 	p {
 		line-height: 14px;
@@ -59,6 +59,10 @@ body {
 		font-size: 24px;
 		padding: 0 0 5px 10px;
 	}
+	h1.article_list_header{ 
+		font-size: 20px;
+	}
+
 	h1.block_header{
 		a {
 			font-size: 14px;
