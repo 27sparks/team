@@ -47,12 +47,40 @@ body {
 		font-size: 24px;
 		color: #ddd;
 		background-color: #000;
+		background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, #000000),
+			color-stop(1, #222222)
+		);
+
 		border-bottom: solid 3px #c00;
 		border-radius: 5px;
 	}
 	h1.page_header {
 		font-size: 24px;
 		background-color: #000;
+		background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
+		background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, #000000),
+			color-stop(1, #222222)
+		);
+
 		border-radius: 5px;
 	}
 	h1.article_header{ 
