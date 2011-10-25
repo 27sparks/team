@@ -66,26 +66,11 @@ body {
 	}
 	h1.page_header {
 		font-size: 24px;
-		background-color: #000;
-		background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0, #000000),
-			color-stop(1, #222222)
-		);
-
-		border-radius: 5px;
+		border-bottom: 1px solid #666;
 	}
 	h1.article_header{ 
 		font-size: 24px;
-		padding: 0 0 5px 10px;
+		padding: 0 0 5px 0px;
 	}
 	h1.article_list_header{ 
 		font-size: 20px;

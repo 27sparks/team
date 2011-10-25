@@ -1,5 +1,5 @@
 %section#news
-  %h1.section_header News
+  %h1.section_header= link_to "News", news_path
   #blocks
     - @posts.take(3).each do |post|
       .news_block

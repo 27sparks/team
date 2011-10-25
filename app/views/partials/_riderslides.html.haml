@@ -1,5 +1,5 @@
 #riderslideshow
-  %h1.section_header Team
+  %h1.section_header= link_to "Team", team_path
   %ul#rotator
     - @riders.each do |rider|
       %li.riderslide{ :id => rider.name }
