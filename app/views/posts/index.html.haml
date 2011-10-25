@@ -6,6 +6,8 @@
         %th Überschrift
         %th Inhalt
         %th Bild
+        %th Slideshow
+        %th Topnews
         %th
         %th
         %th
@@ -15,6 +17,8 @@
           %td= post.title
           %td= preview(post.body, 90)
           %td= image_tag post.image(:thumb).to_s
+          %td= post.slideshow
+          %td= post.topnews
           %td= link_to 'zeigen', post
           %td= link_to 'bearbeiten', edit_post_path(post)
           %td= link_to 'Löschen', post, confirm: 'Sind Sie sicher?', method: :delete

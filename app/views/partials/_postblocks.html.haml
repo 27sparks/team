@@ -1,7 +1,7 @@
 %section#news
   %h1.section_header= link_to "News", news_path
   #blocks
-    - @posts.take(3).each do |post|
+    - @posts.where(:topnews => true).take(3).each do |post|
       .news_block
         %h1.block_header= link_to post.title, post_url(post.id)
         =image_tag post.image(:thumb).to_s 

@@ -3,6 +3,8 @@ class HomeController < ApplicationController
 
   def index
   	@posts = Post.all
+    @slides = Post.where(:slideshow => true)
+    @topnews = Post.where(:topnews => true)
     @riders = Rider.all
   	@title = "Home"
     if (@post == nil) 

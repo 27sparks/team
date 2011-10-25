@@ -12,8 +12,7 @@
           , Update am
           = date2dmy(@post.updated_at)
     =image_tag @post.image(:medium).to_s 
-    %p= simple_format(@post.body)
-     
-    = link_to 'zurück', news_path
+    %p= simple_format(@post.body)     
+    = link_to 'zur News-Seite', news_path
 #news_row
   = render 'partials/postblocks'
