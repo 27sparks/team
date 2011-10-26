@@ -4,10 +4,13 @@
     %table
       %tr
         %th Überschrift
-        %th Inhalt
+        %th Datum
+        %th Update
         %th Bild
-        %th Slideshow
-        %th Topnews
+        %th 
+          Slideshow/
+          %br
+          Topnews
         %th
         %th
         %th
@@ -15,13 +18,18 @@
       - @posts.each do |post|
         %tr
           %td= post.title
-          %td= preview(post.body, 90)
+          %td= date2dmy(post.created_at)
+          %td= date2dmy(post.updated_at)
           %td= image_tag post.image(:thumb).to_s
-          %td= post.slideshow
-          %td= post.topnews
-          %td= link_to 'zeigen', post
-          %td= link_to 'bearbeiten', edit_post_path(post)
-          %td= link_to 'Löschen', post, confirm: 'Sind Sie sicher?', method: :delete
+          %td
+            - if (post.slideshow == true)
+              Slide
+              %br 
+            - if (post.topnews == true)
+              Topnews  
+          %td= link_to (image_tag ('show.png')), post
+          %td= link_to (image_tag ('edit.png')), edit_post_path(post)
+          %td= link_to (image_tag ('delete.png')), post, confirm: 'Sind Sie sicher?', method: :delete
 
     %br
 

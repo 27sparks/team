@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order_by([:created_at, :desc])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def list
-    @posts = Post.all
+    @posts = Post.all.order_by([:created_at, :desc])
     @title = "News"
 
     respond_to do |format|
@@ -73,7 +73,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to posts_url, notice: 'Post was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

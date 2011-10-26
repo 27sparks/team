@@ -1,6 +1,6 @@
 #rotator_wrapper
   %ul#rotator
-    - @slides.take(6).each do |post|
+    - @posts.where(:slideshow => true).take(6).each do |post|
       %li.slide{ :id => post.title.to_s }
         .slide_image
           .image= link_to (image_tag post.image(:slide).to_s), post_url(post.id)

@@ -2,9 +2,7 @@ class HomeController < ApplicationController
   skip_before_filter :authorize, :only => [:index, :coming]
 
   def index
-  	@posts = Post.all
-    @slides = Post.where(:slideshow => true)
-    @topnews = Post.where(:topnews => true)
+  	@posts = Post.all.order_by([:created_at, :desc])
     @riders = Rider.all
   	@title = "Home"
     if (@post == nil) 

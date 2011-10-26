@@ -1,0 +1,35 @@
+= form_for(@post) do |f|
+  - if @post.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@post.errors.count, "error") 
+        prohibited this post from being saved:
+
+      %ul
+        @post.errors.full_messages.each do |msg|
+        %li= msg
+  .field
+    = f.label 'Überschrift:'
+    %br
+    = f.text_field :title, :size => 90 
+    = f.label :slideshow
+    = f.check_box :slideshow
+    = f.label :topnews
+    = f.check_box :topnews
+  .field
+    = f.label 'Inhalt:'
+    %br
+    = f.text_area :body, :cols => 90, :rows => 30
+  .field
+    %table
+      %tr
+        %td  
+          = f.label 'Bild:'
+          = f.file_field :image
+        - if (@post.image.exists?)
+          %td
+            Altes Bild:
+            %br 
+            =image_tag @post.image(:thumb).to_s
+  .actions
+    = f.submit
