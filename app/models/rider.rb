@@ -9,7 +9,6 @@ class Rider
   field :description, :type => String
   field :image, :type => String
 
-
   attr_accessible :name, :klasse, :verein, :geburtstag, :description, :image
   validates :name, :presence => true
 

@@ -1,0 +1,31 @@
+%section#news
+  %h1.page_header News-Übersicht
+  %article
+    %table
+      %tr
+        %th Name
+        %th Admin
+        %th
+        %th
+        %th
+
+      - @users.each do |user|
+        %tr
+          %td= user.name
+          %td
+            - if (user.admin == true)
+              Admin
+            - else 
+              X
+          %td
+            - if (user.author == true)
+              Autor
+            - else 
+              X    
+          %td= link_to (image_tag ('show.png')), user
+          %td= link_to (image_tag ('edit.png')), edit_user_path(user)
+          %td= link_to (image_tag ('delete.png')), user, confirm: 'Sind Sie sicher?', method: :delete
+
+    %br
+
+    = link_to 'Benutzer erstellen', new_user_path

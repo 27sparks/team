@@ -35,6 +35,7 @@ GEM
     bson (1.4.1)
     bson_ext (1.4.1)
     builder (3.0.0)
+    cancan (1.6.7)
     capistrano (2.9.0)
       highline
       net-scp (>= 1.0.0)
@@ -154,6 +155,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bson_ext (~> 1.4)
+  cancan
   capistrano
   coffee-rails (~> 3.1.0)
   haml

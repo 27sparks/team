@@ -14,6 +14,12 @@
     %br
     = f.text_field :name 
   .field
+    = f.label 'Admin'
+    = f.check_box :admin
+  .field
+    = f.label 'Autor'
+    = f.check_box :author, :checked => true  
+  .field
     = f.label 'Passwort'
     %br
     = f.password_field :password

@@ -15,7 +15,7 @@ Team2011::Application.routes.draw do
   match 'news' => 'posts#list'
   match 'team' => 'riders#list'
   match 'admin' => 'home#admin'
-  match 'coming' => 'home#coming'
+  match 'coming' => 'home#show'
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'
   match 'register' => 'users#new'

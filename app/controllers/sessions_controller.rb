@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_filter :authorize, :only => [:new]
-
+  
   def new
   end
 
@@ -8,7 +7,7 @@ class SessionsController < ApplicationController
   	user = User.where( :name => params[:name] ).first
   	if user && user.authenticate(params[:password])
   	  session[:user_id] = user.id
-  	  redirect_to admin_path, :notice => "Eingeloggt!"
+  	  redirect_to root_path, :notice => "Eingeloggt!"
   	else 
   	  flash_now_alert = "Passwort oder Name falsch!"
   	  render "new"
