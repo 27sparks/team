@@ -1,11 +1,11 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
-  hello: "Hello world"
+de:
+  hello: "Hallo Welt"
   views:
     pagination:
-      previous: "&lt; newer Posts"
-      next: "older Posts &gt;"
-      last: "last Page &gt;&gt;"
-      first: "&lt;&lt; first Page"
+      previous: "&lt; neuere Meldungen"
+      next: "&auml;ltere Meldungen &gt;"
+      last: "Letzte Seite &gt;&gt;"
+      first: "&lt;&lt; Erste Seite"
