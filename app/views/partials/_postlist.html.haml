@@ -15,3 +15,4 @@
       =image_tag post.image(:thumb).to_s 
       %p= simple_format(preview(post.body))
       = link_to 'mehr', post_url(post.id)
+  = paginate @posts

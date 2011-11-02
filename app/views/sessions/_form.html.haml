@@ -1,5 +1,4 @@
 - if (session[:user_id])
-  %li= link_to 'Administrator-Seite', admin_path
   %li= link_to 'abmelden', logout_url
 - else
   = form_tag sessions_path do

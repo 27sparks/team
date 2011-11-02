@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def list
-    @posts = Post.all.order_by([:created_at, :desc])
+    @posts = Post.all.order_by([:created_at, :desc]).page(params[:page]).per(4)
     @title = "News"
 
     respond_to do |format|
