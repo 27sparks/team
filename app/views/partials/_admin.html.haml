@@ -1,18 +1,13 @@
-%section#admin
-  - if can? :create, @post
-    %span.admin_link= link_to 'Nachricht erstellen', new_post_path
-  - if can? :index, @riders
-    %span.admin_link= link_to 'Nachrichten auflisten/bearbeiten', posts_path
-  - if can? :create, @rider  
-    %span.admin_link= link_to 'Fahrer hinzufügen', new_rider_path
-  - if can? :index, @riders
-    %span.admin_link= link_to 'Fahrer auflisten/bearbeiten', riders_path
-  - if can? :create, @user
-    %span.admin_link= link_to 'Neuer Benutzer', register_path
-  - if can? :index, @users
-    %span.admin_link= link_to 'Benutzer auflisten/bearbeiten', users_path
-  - if can? :destroy, @session
-    %span.admin_link= link_to 'ausloggen', logout_path    
+- if session[:user_id] 
+  #admin
+    - if can? :index, @riders
+      %span.admin_link= link_to 'Nachrichten', posts_path
+    - if can? :index, @riders
+      %span.admin_link= link_to 'Fahrer', riders_path
+    - if can? :index, @users
+      %span.admin_link= link_to 'Benutzer', users_path
+    - if can? :destroy, @session
+      %span.admin_link= link_to 'ausloggen', logout_path    
 
 
 

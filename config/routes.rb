@@ -14,7 +14,6 @@ Team2011::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   match 'news' => 'posts#list'
   match 'team' => 'riders#list'
-  match 'admin' => 'home#admin'
   match 'coming' => 'home#show'
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'

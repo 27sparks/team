@@ -1,4 +1,6 @@
 %section#news
+  - if can? :create, @post
+    .new= link_to 'Nachricht erstellen', new_post_path
   %h1.page_header News-Übersicht
   %article
     %table
@@ -30,7 +32,5 @@
           %td= link_to (image_tag ('show.png')), post
           %td= link_to (image_tag ('edit.png')), edit_post_path(post)
           %td= link_to (image_tag ('delete.png')), post, confirm: 'Sind Sie sicher?', method: :delete
-
-    %br
-
-    = link_to 'Nachricht erstellen', new_post_path
+  - if can? :create, @post
+    .new= link_to 'Nachricht erstellen', new_post_path

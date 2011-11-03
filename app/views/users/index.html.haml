@@ -1,5 +1,7 @@
 %section#news
-  %h1.page_header News-Übersicht
+  - if can? :create, @user
+    .new= link_to 'Neuer Benutzer', register_path
+  %h1.page_header Benutzer-Übersicht
   %article
     %table
       %tr
@@ -25,7 +27,5 @@
           %td= link_to (image_tag ('show.png')), user
           %td= link_to (image_tag ('edit.png')), edit_user_path(user)
           %td= link_to (image_tag ('delete.png')), user, confirm: 'Sind Sie sicher?', method: :delete
-
-    %br
-
-    = link_to 'Benutzer erstellen', new_user_path
+  - if can? :create, @user
+    .new= link_to 'Neuer Benutzer', register_path  

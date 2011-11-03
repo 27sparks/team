@@ -1,4 +1,6 @@
 %section#fahrer
+  - if can? :create, @rider
+    .new= link_to 'Neuer Fahrer', new_rider_path
   %h1.page_header Fahrer-Übersicht
   %article
     %table
@@ -6,6 +8,7 @@
         %th Name
         %th Klasse
         %th Beschreibung
+        %th Geburtstag
         %th Bild
         %th
         %th
@@ -16,11 +19,10 @@
           %td= rider.name
           %td= rider.klasse
           %td= preview(rider.description, 90)
+          %td= date2dmy(rider.geburtstag)
           %td= image_tag rider.image(:thumb).to_s
           %td= link_to (image_tag ('show.png')), rider
           %td= link_to (image_tag ('edit.png')), edit_rider_path(rider)
           %td= link_to (image_tag ('delete.png')), rider, confirm: 'Sind Sie sicher?', method: :delete
-
-    %br
-
-    = link_to 'Neuer Fahrer', new_rider_path
+  - if can? :create, @rider
+    .new= link_to 'Neuer Fahrer', new_rider_path

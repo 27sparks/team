@@ -17,10 +17,18 @@ $shadow: #222;
     top: 0px;
     background: #3f6;
     width: 100%;
+    padding: 5px;
     text-align: center;
    	.admin_link{
 		font-size: 12px;
 		margin: 5px 10px;
+		a { 
+			color: #000;
+			font-weight: bold;
+		}
+		a:hover {
+			color: #d00;
+		}
 	}
 }
 #header {
@@ -332,12 +340,22 @@ article.fahrer {
 
 /**** Admin Layout ***/
 
-#admin {
-	li {
-		margin: 10px 0;
-	}
 
-}
 .field {
 	margin: 10px 0;
+}
+.new {
+	padding: 8px;
+	background: #3f6;
+	display: block;
+	float: right;
+	border-radius: 5px;
+	a {
+		color: #000;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	a:hover {
+		color: #f00;
+	}
 }
