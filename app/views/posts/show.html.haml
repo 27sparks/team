@@ -3,11 +3,11 @@
   %article.news_item
     %h1.article_header= @post.title
     .namedate 
-      - if (@post.user && @post.created_at)
+      - if ( @post.user && @post.date_published )
         von
         = @post.user.name
         am
-        = date2dmy(@post.created_at)
+        = date2dmy(@post.date_published)
         - if @post.updated_at > @post.created_at
           , Update am
           = date2dmy(@post.updated_at)
