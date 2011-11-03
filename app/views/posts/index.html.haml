@@ -4,8 +4,8 @@
     %table
       %tr
         %th Überschrift
-        %th Datum
-        %th Update
+        %th Created/Updated
+        %th Veröffentlicht
         %th Bild
         %th 
           Slideshow/
@@ -18,8 +18,10 @@
       - @posts.each do |post|
         %tr
           %td= post.title
-          %td= date2dmy(post.created_at)
-          %td= date2dmy(post.updated_at)
+          %td
+            = date2dmy(post.created_at)
+            = date2dmy(post.updated_at)
+          %td= date2dmy(post.date_published)
           %td= image_tag post.image(:thumb).to_s
           %td
             - if (post.slideshow == true)

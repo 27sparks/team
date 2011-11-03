@@ -13,8 +13,11 @@
           Verein:
           %em= @rider.verein
         %li
-          Geburtstag:
-          %em= @rider.geburtstag
+          Geburtstag
+          %em= date2dmy(@rider.geburtstag)
+        %li
+          Team:
+          %em= @rider.team
         %li
           Erfolge:
           %em= simple_format(@rider.description)

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order_by([:created_at, :desc]).page(params[:page]).per(20)
+    @posts = Post.all.order_by([:date_published, :desc]).page(params[:page]).per(20)
     #authorize! if cannot? :read, @posts
     respond_to do |format|
       format.html # index.html.erb
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def list
-    @posts = Post.all.order_by([:created_at, :desc]).page(params[:page]).per(8)
+    @posts = Post.all.order_by([:date_published, :desc]).page(params[:page]).per(8)
     @title = "News"
 
     respond_to do |format|

@@ -1,17 +1,20 @@
 class Rider
   include Mongoid::Document
   include Mongoid::Paperclip
+  include Mongoid::MultiParameterAttributes
   
-  field :name, :type => String
-  field :klasse, :type => String
-  field :verein, :type => String
-  field :geburtstag, :type => String
-  field :description, :type => String
-  field :image, :type => String
+    attr_accessible :name, :klasse, :verein, :geburtstag, :description, :image, :team
 
-  attr_accessible :name, :klasse, :verein, :geburtstag, :description, :image
+
+  field :name
+  field :klasse
+  field :verein
+  field :description
+  field :image
+  field :team
+  field :geburtstag, :type => Date
+
   validates :name, :presence => true
 
-  has_mongoid_attached_file :image, :styles => { :back => "720x600#", :medium => "220x280#", :team => "160x240#", :thumb => "100x100#" },
-                                    :convert_options => { :back => '-colorspace Gray -blur 0x8'}
+  has_mongoid_attached_file :image, :styles => { :medium => "220x280#", :team => "160x240#", :thumb => "100x100#" }
 end
