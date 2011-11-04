@@ -9,18 +9,16 @@
         %th Klasse
         %th Beschreibung
         %th Geburtstag
-        %th Bild
         %th
         %th
         %th
 
       - @riders.order_by([:name, :asc]).each do |rider|
         %tr
-          %td= rider.name + ', ' + rider.first_name.to_s
+          %td= link_to rider_name(rider), rider
           %td= rider.klasse
           %td= preview(rider.description, 90)
           %td= date2dmy(rider.geburtstag)
-          %td= image_tag rider.image(:thumb).to_s
           %td= link_to (image_tag ('show.png')), rider
           %td= link_to (image_tag ('edit.png')), edit_rider_path(rider)
           %td= link_to (image_tag ('delete.png')), rider, confirm: 'Sind Sie sicher?', method: :delete

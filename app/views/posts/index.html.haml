@@ -19,10 +19,12 @@
 
       - @posts.each do |post|
         %tr
-          %td= post.title
+          %td= link_to post.title, post
           %td= date2dmy(post.date_published)
           %td= post.user.name
-          %td= image_tag post.image(:thumb).to_s
+          %td
+            - if (post.image.exists?)
+              = image_tag post.image(:thumb).to_s
           %td
             - if (post.slideshow == true)
               Slide
