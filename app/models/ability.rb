@@ -14,6 +14,8 @@ class Ability
       can :update, :all
       can :index, :all
       can :destroy, :all
+      can :show, :all
+      can :list, :all
     else
       can :show, :all
       can :list, :all
