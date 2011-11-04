@@ -4,14 +4,11 @@
     %article.news_list_item
       %h1.article_list_header= link_to post.title, post_url(post.id)
       .namedate 
-        - if (post.user && post.created_at)
+        - if (post.user && post.date_published)
           von
           = post.user.name
           am
-          = date2dmy(post.created_at)
-          - if post.updated_at
-            , Update am
-            = date2dmy(post.updated_at)
+          = date2dmy(post.date_published)
       =image_tag post.image(:thumb).to_s 
       %p= simple_format(preview(post.body))
       = link_to 'mehr', post_url(post.id)

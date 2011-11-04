@@ -12,7 +12,7 @@
       .headline
         %ul
           %li.block_header
-            %span.date= date2dmy(post.created_at)
+            %span.date= date2dmy(post.date_published)
             = link_to post.title, post_url(post.id)
             -if post.user
               %span.name
