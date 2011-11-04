@@ -10,9 +10,13 @@
           %li= msg 
 
   .field
-    = f.label 'Name:'
+    = f.label 'Nachname:'
     %br
-    = f.text_field :name 
+    = f.text_field :name
+  .field
+    = f.label 'Vorname:'
+    %br
+    = f.text_field :first_name
   .field
     = f.label 'Klasse:'
     %br
@@ -23,19 +27,19 @@
     = f.text_field :verein
   .field
     = f.label 'Geburtstag:'
-    %br
     = f.date_select :geburtstag, :start_year => Time.now.year - 60, :end_year => Time.now.year
   .field
     = f.label 'Team:'
-    %br
-    = f.select :team, ['Radverleih-Mallorca@Berner-Bikes.com (Damen)', 'Radvermietung-Mallorca@ Berner Bikes.com (Masters)', 'Rent-a-Bike@Berner-Bikes.com (Elite)']
+    = f.select :team, [ELITE_TEAM, WOMEN_TEAM, MASTERS_TEAM]
   .field
-    = f.label 'Beschreibung/Erfolge:'
+    = f.label 'Reihenfolge:'
+    = f.select :order, (1..6)
+  .field
+    = f.label 'Erfolge:'
     %br
     = f.text_area :description
   .field
     = f.label 'Bild:'
-    %br
     = f.file_field :image 
   .actions
     = f.submit 'Erstellen'

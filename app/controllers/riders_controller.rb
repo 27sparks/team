@@ -1,6 +1,6 @@
 class RidersController < ApplicationController
   load_and_authorize_resource
-  
+  helper :all
 
   def new
     respond_to do |format|

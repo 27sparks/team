@@ -18,7 +18,6 @@
     = f.check_box :topnews
   .field
     = f.label 'Veröffentlicht am:'
-    %br
     = f.date_select :date_published
   .field
     = f.label 'Inhalt:'
@@ -28,12 +27,27 @@
     %table
       %tr
         %td  
-          = f.label 'Bild:'
+          = f.label 'Bild 1:'
           = f.file_field :image
+          %br
+          = f.text_field :first_image_tag
         - if (@post.image.exists?)
           %td
             Altes Bild:
             %br 
             =image_tag @post.image(:thumb).to_s
+  .field  
+    %table
+      %tr
+        %td  
+          = f.label 'Bild 2:'
+          = f.file_field :second_image
+          %br
+          = f.text_field :second_image_tag
+        - if (@post.second_image.exists?)
+          %td
+            Altes Bild:
+            %br 
+            =image_tag @post.second_image(:thumb).to_s
   .actions
     = f.submit 'Erstellen'

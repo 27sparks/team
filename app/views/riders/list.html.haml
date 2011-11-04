@@ -1,20 +1,20 @@
 #fahrer
   %h1.page_header Team
   %section.team
-    %h1.team_header Rent-a-Bike@Berner-Bikes.com (Elite)
-    - @riders.where( :team => 'Rent-a-Bike@Berner-Bikes.com (Elite)' ).each do |rider|
+    %h1.team_header= ELITE_TEAM
+    - @riders.where( :team => ELITE_TEAM ).order_by([:order, :asc]).each do |rider|
       .fahrer
         = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider.name, rider_url(rider.id)
+        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)
   %section.team
-    %h1.team_header Radverleih-Mallorca@Berner-Bikes.com (Damen)
-    - @riders.where( :team => 'Radverleih-Mallorca@Berner-Bikes.com (Damen)' ).each do |rider|
+    %h1.team_header= WOMEN_TEAM
+    - @riders.where( :team => WOMEN_TEAM ).order_by([:order, :asc]).each do |rider|
       .fahrer
         = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider.name, rider_url(rider.id)
+        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)
   %section.team
-    %h1.team_header Radvermietung-Mallorca@Berner-Bikes.com (Masters)
-    - @riders.where( :team => 'Radvermietung-Mallorca@ Berner Bikes.com (Masters)' ).each do |rider|
+    %h1.team_header= MASTERS_TEAM
+    - @riders.where( :team => MASTERS_TEAM ).order_by([:order, :asc]).each do |rider|
       .fahrer
         = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider.name, rider_url(rider.id)
+        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)

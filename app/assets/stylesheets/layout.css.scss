@@ -177,13 +177,24 @@ $shadow: #222;
 article {
 	clear: both;
 	padding: 0px 10px 20px 0px;
-
-	img {
+	p {
+		margin-bottom: 10px;
+	}
+	.first_image, .second_image {
 		float: left;
 		display: block;
-		border-radius: 5px;
-		margin: 10px 10px 0px 0px;
+		margin: 10px 10px 10px 0px;
+		color: #444;
+		img {
+			border-radius: 5px;
+			margin-bottom: 3px;
+		}
 	}
+	.backlink {
+		float: right;
+		margin: 20px 0 30px;
+	}
+
 }
 #headlines {
 	clear: both;
@@ -343,7 +354,11 @@ article.fahrer {
 
 .field {
 	margin: 10px 0;
+	td {
+		text-align: right;
+ 	}
 }
+
 .new {
 	padding: 8px;
 	background: #3f6;
@@ -358,4 +373,7 @@ article.fahrer {
 	a:hover {
 		color: #f00;
 	}
+}
+.backlink {
+	margin: 20px 0 30px;
 }

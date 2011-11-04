@@ -3,15 +3,17 @@ class Rider
   include Mongoid::Paperclip
   include Mongoid::MultiParameterAttributes
   
-    attr_accessible :name, :klasse, :verein, :geburtstag, :description, :image, :team
+    attr_accessible :name, :first_name, :klasse, :verein, :geburtstag, :description, :image, :team, :order 
 
 
   field :name
+  field :first_name
   field :klasse
   field :verein
   field :description
   field :image
   field :team
+  field :order, :type => Integer
   field :geburtstag, :type => Date
 
   validates :name, :presence => true

@@ -14,9 +14,9 @@
         %th
         %th
 
-      - @riders.each do |rider|
+      - @riders.order_by([:name, :asc]).each do |rider|
         %tr
-          %td= rider.name
+          %td= rider.name + ', ' + rider.first_name.to_s
           %td= rider.klasse
           %td= preview(rider.description, 90)
           %td= date2dmy(rider.geburtstag)
