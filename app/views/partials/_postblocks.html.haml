@@ -1,8 +1,13 @@
 %section#news
   %h1.section_header= link_to "News", news_path
   #blocks
-    - @posts.where(:topnews => true).take(3).each do |post|
+    - @posts.where(:topnews => true).order_by([:date_published, :desc]).take(3).each do |post|
       .news_block
+        %span.date
+          = date2dmy(post.date_published)
+          -if post.user
+            von
+            =post.user.name
         %h1.block_header= link_to post.title, post_url(post.id)
         =image_tag post.image(:thumb).to_s 
         %p= simple_format(preview(post.body))

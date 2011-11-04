@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Post.all
     #authorize! if can? :read, @post
 
     respond_to do |format|

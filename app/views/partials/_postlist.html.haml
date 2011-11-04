@@ -9,7 +9,8 @@
           = post.user.name
           am
           = date2dmy(post.date_published)
-      =image_tag post.image(:thumb).to_s 
+      - if (post.image.exists?)
+        =image_tag post.image(:thumb).to_s 
       %p= simple_format(preview(post.body))
       = link_to 'mehr', post_url(post.id)
   = paginate @posts
