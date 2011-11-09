@@ -9,7 +9,7 @@ $shadow: #222;
 
 #wrap {
 	width: 1000px; 
-	margin: 20px auto;
+	margin: 20px auto 400px;
 	padding: 0 20px;
 }
 #admin {
@@ -36,13 +36,12 @@ $shadow: #222;
 	margin-bottom: 25px;
 	#social_bar {
 		float:right;
-		width: 220px;
+		width: 280px;
 		text-align:right;
 		margin-top: -2px;
 	}
 	.social{
 		display: inline;
-		margin: 0px 0px 0 5px;
 		img {
 			border-radius: 3px;
 		}
@@ -294,20 +293,24 @@ article.fahrer {
 	}
 }
 .name_tag{
-	-webkit-transform:rotate(270deg);
-	-moz-transform:rotate(270deg);
 	border-radius: 5px;
-	width: 260px;
+	width: 200px;
 	position: absolute;
-	left: -122px;
-	bottom: 124px;
+	left: 0px;
+	bottom: 0px;
 	color: #ddd;
 	font-size: 18px;
 	padding:5px 10px;
 	color: #ddd;
-
 	background: #333;
-	opacity: 0.8
+	opacity: 0.8;
+	.rider_logo {
+		float: left;
+	}
+	.rider_name {
+		margin-top:4px;
+		float: right;
+	}
 }
 .slide_tag {
  	position: absolute;
