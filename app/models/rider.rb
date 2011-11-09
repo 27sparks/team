@@ -16,9 +16,10 @@ class Rider
   field :order, :type => Integer
   field :geburtstag, :type => Date
   
-  key :name
+  key :first_name, :name
   
   validates :name, :presence => true
+  validates :first_name, :presence => true
 
   has_mongoid_attached_file :image, :styles => { :medium => "220x280#", :team => "160x240#", :thumb => "100x100#" }
 end
