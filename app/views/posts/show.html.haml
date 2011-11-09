@@ -27,6 +27,9 @@
         .second_image
           = image_tag @post.image(:slide).to_s
           = @post.first_image_tag
-    .backlink= link_to 'zurück zur News-Seite >>', news_path
+    .post_bottom
+      .backlink= link_to 'zurück zur News-Seite >>', news_path
+      .fb-like{:href => "team.berner-bikes.com", :send => "true", :layout => "button_count", :width => "200", :show_faces => "true", :colorscheme => "dark"}
+
 #news_row
   = render 'partials/postblocks'
