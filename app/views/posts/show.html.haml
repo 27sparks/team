@@ -23,7 +23,7 @@
            
     %p
       = simple_format(@post.body)
-      - if (@post.image.exists?)
+      - if (@post.image.exists? && slideshow)
         .second_image
           = image_tag @post.image(:slide).to_s
           = @post.first_image_tag
