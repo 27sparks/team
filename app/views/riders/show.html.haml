@@ -1,6 +1,6 @@
 %p#notice= notice 
 %section#fahrer
-  %h1.page_header= @rider.name 
+  %h1.page_header= rider_name(@rider) 
   %article.fahrer
     .rider_image
       =image_tag @rider.image(:medium).to_s

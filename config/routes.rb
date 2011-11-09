@@ -18,6 +18,8 @@ Team2011::Application.routes.draw do
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'
   match 'register' => 'users#new'
+  
+  match 'fahrer/:id' => 'riders#show'
 
   match "/images/uploads/*path" => "gridfs#serve"
 
