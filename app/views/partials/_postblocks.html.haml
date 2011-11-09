@@ -5,7 +5,7 @@
       .news_block
         %span.date
           = date2dmy(post.date_published)
-          -if post.user
+          -if post.user.exists?
             von
             =post.user.name
         %h1.block_header= link_to post.title, post_url(post.id)
