@@ -227,7 +227,6 @@ article {
 	img {
 		float: left;
 		display: block;
-		border-radius: 5px;
 		margin: 0px 10px 0px 0px;
 	}
 	h1 a {
@@ -237,6 +236,15 @@ article {
 }
 .news_block:last-child {
 	margin-right: 0px;
+}
+
+/**** postlist layout ****/
+
+.postlist_image {
+	float: left;
+	border-radius:3px;
+	margin: 10px;
+	overflow:hidden;	
 }
 
 /**** Fahrer layout ****/

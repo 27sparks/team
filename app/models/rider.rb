@@ -20,6 +20,7 @@ class Rider
   
   validates :name, :presence => true
   validates :first_name, :presence => true
+  validates :image, :presence => true
 
   has_mongoid_attached_file :image, :styles => { :medium => "220x280#", :team => "160x240#", :thumb => "100x100#" }
 end
