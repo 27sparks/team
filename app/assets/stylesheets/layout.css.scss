@@ -384,6 +384,7 @@ article.fahrer {
 	display: block;
 	float: right;
 	border-radius: 5px;
+	margin-bottom: 20px;
 	a {
 		color: #000;
 		font-weight: bold;
@@ -395,4 +396,8 @@ article.fahrer {
 }
 .backlink {
 	margin: 20px 0 30px;
+}
+.pagination {
+	padding: 20px;
+	border: solid 1px #222;
 }
