@@ -9,6 +9,8 @@
           = post.user.name
           am
           = date2dmy(post.date_published)
+        - else 
+          = date2dmy(post.date_published)
         - if (post.image.exists?)
           .postlist_image=image_tag post.image(:thumb).to_s 
       %p= simple_format(preview(post.body))
