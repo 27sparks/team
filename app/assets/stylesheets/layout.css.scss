@@ -227,7 +227,7 @@ article {
 	img {
 		float: left;
 		display: block;
-		margin: 0px 10px 0px 0px;
+		margin: 0px 10px 10px 0px;
 	}
 	h1 a {
 		size: 20px;
@@ -336,16 +336,15 @@ article.fahrer {
  	border-top: 1px solid #444;
  	border-bottom: 1px solid #222;
  	opacity: 0.8;
- 	.title {
- 		width: 550px;
-		padding: 10px;	
+ 	h1 {
+ 		width: 750px;
  	}
  	.logo {
  		position: absolute;
  		bottom: 5px;
  		right: 0px;
  		text-align: center;
- 		width: 160px;
+ 		width: 140px;
  		height: 30px;
  		padding: 3px;
  		img {
