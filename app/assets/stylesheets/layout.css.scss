@@ -190,6 +190,9 @@ article {
 			margin-bottom: 3px;
 		}
 	}
+	.second_image {
+		clear: both;
+	}
 	.post_bottom {
 		clear: both;
 		margin: 20px 0 30px 0;
@@ -227,7 +230,8 @@ article {
 	img {
 		float: left;
 		display: block;
-		margin: 0px 10px 10px 0px;
+		margin: 5px 10px 5px 0px;
+		border-radius: 5px;
 	}
 	h1 a {
 		size: 20px;

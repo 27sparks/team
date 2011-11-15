@@ -9,7 +9,7 @@
             von
             =post.user.name
         %h1.block_header= link_to post.title, post_url(post.id)
-        =image_tag post.image(:thumb).to_s 
+        =link_to (image_tag post.image(:thumb).to_s), post_url(post.id)
         %p= simple_format(preview(post.body))
         = link_to 'mehr', post_url(post.id)
   #headlines
