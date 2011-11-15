@@ -1,10 +1,10 @@
-set :user, 'root'
+set :user, 'ejpres'
 set :domain, 'nordmeyer.name'
 set :application, "team"
 
 #file paths
 set :repository,  "#{user}@#{domain}:git/#{application}.git"
-set :deploy_to, "/var/www/#{application}"
+set :deploy_to, "/var/www/rails/#{application}"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, domain                      # Your HTTP server, Apache/etc
@@ -16,10 +16,9 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 set :repository, "git@github.com:27sparks/team.git"  # Your clone URL
 set :scm, "git"
-set :user, "deploy"  # The server's user for deploys
 set :scm_passphrase, "hatepunk"  # The deploy user's password
 
-set :rake "/usr/local/rvm/gems/ruby-1.9.2-p290/bin/rake"
+set :rake, "/usr/local/bin/rake"
 set :deploy_via, :remote_cache
 set :branch, 'master'
 set :scm_verbose, true
@@ -30,10 +29,6 @@ namespace :deploy do
 	desc "cause Passenger to initiate a restart"
 	task :restart do
 		run "touch #{current_path}/tmp/restart.txt"
-	end
-	desc "reload the db with seed data"
-	task :seed do
-		run "cd #{current_path}; rake db:seed RAILS_ENV=production"
 	end
 end
 

@@ -284,6 +284,26 @@ article.fahrer {
 		}
 	}
 }
+
+
+/**** Material Layout ****/
+
+article.material {
+	img {
+		border-radius:5px;
+	}
+	.image {
+	    background: #222;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		p { 
+		padding-bottom: 10px;
+		}
+	}
+
+}
+
+
 /**** Slides Layout ****/
 #rotator_wrapper{
 	height: 400px;

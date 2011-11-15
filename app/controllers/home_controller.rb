@@ -22,6 +22,15 @@ class HomeController < ApplicationController
     end
   end
 
+  def material
+    @title = "Material"
+
+    respond_to do |format|
+      format.html # index.html.erb}
+      format.json { render json: @posts }
+    end
+  end
+
 
 
 end
