@@ -32,8 +32,8 @@
               %br 
             - if (post.topnews == true)
               Topnews  
-          %td= link_to (image_tag ('edit.png')), edit_post_path(post)
-          %td= link_to (image_tag ('delete.png')), post, confirm: 'Sind Sie sicher?', method: :delete
+          %td= link_to "bearbeiten", edit_post_path(post)
+          %td= link_to "löschen", post, confirm: 'Sind Sie sicher?', method: :delete
     = paginate @posts    
   - if can? :create, @post
     .new= link_to 'Nachricht erstellen', new_post_path
