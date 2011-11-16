@@ -7,7 +7,7 @@
     - if can? :index, @users
       %span.admin_link= link_to 'Benutzer', users_path
     - if can? :destroy, @session
-      %span.admin_link= link_to 'ausloggen', logout_path    
+      .admin_link.logout= link_to 'ausloggen', logout_path    
 
 
 

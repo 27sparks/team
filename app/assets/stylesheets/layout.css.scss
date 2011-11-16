@@ -17,7 +17,7 @@ $shadow: #222;
     top: 0px;
     background: #3f6;
     padding: 10px;
-    text-align: center;
+    text-align: left;
    	.admin_link{
 		font-size: 12px;
 		margin: 5px 5px;
@@ -33,6 +33,13 @@ $shadow: #222;
 			color: #d00;
 			background: #000;
 		}
+		.logout{
+			float:right;
+		}
+	}
+	.admin_link.logout{
+		float:right;
+		margin-top: 0px;
 	}
 }
 #header {
