@@ -33,3 +33,8 @@ $ ->
     random: 1,
     delay: -3500
     })
+  $('.material_slideshow').cycle({
+    fx: 'fade',
+    pause: 1,
+    delay: -4000
+    })  
