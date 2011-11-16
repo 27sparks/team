@@ -308,11 +308,17 @@ article.material {
 		border-radius:5px;
 	}
 	.image {
+	    position: relative;
 	    background: #222;
 		border-radius: 5px;
 		margin-bottom: 20px;
-		p { 
-		padding-bottom: 10px;
+		.subtext {
+			margin-top: -70px;
+			width: 700px;
+			padding:10px;
+			background: #333;
+			opacity: 0.8;
+					
 		}
 	}
 
