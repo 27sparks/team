@@ -10,4 +10,12 @@ module ApplicationHelper
       "#{@title} | #{base_title}"
     end
   end
+
+  def fb_image
+  	if @post.nil?
+  	  "no image"
+  	else
+      root_url[0...-1] + @post.image(:thumb)
+  	end
+  end
 end
