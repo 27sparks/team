@@ -29,7 +29,7 @@
           = @post.first_image_tag
     .post_bottom
       .backlink= link_to 'zurück zur News-Seite >>', news_path
-      .fb-like{:href => "team.berner-bikes.com", :send => "true", :layout => "button_count", :width => "200", :show_faces => "true", :colorscheme => "dark"}
+      .fb-like= render ('fb_like')
 
 #news_row
   = render 'partials/postblocks'
