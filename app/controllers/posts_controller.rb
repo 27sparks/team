@@ -26,7 +26,8 @@ class PostsController < ApplicationController
   def show
     @posts = Post.all
     #authorize! if can? :read, @post
-
+    @title = @post.title
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
