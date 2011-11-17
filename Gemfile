@@ -24,6 +24,7 @@ gem "bson_ext", "~> 1.4"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "cancan"
 
+gem "koala"
 gem "kaminari"
 
 # To use ActiveModel has_secure_password
