@@ -12,10 +12,10 @@ module ApplicationHelper
   end
 
   def fb_image
-  	if @post.nil?
-  	  "no image"
-  	else
+  	if @post != nil && @post.image != nil
       root_url[0...-1] + @post.image(:thumb)
-  	end
+    else
+      root_url
+    end
   end
 end

@@ -4,9 +4,6 @@ class HomeController < ApplicationController
   	@posts = Post.all
     @riders = Rider.all
    	@title = "Home"
-    if (@post == nil) 
-      @post = "Danke"
-    end
     respond_to do |format|
       format.html # index.html.erb}
       format.json { render json: @posts }
