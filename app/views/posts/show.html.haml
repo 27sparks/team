@@ -2,7 +2,7 @@
 %section#news
   %article.news_item
     %h1.article_header= @post.title
-    .namedate 
+    .date 
       - if ( @post.user && @post.date_published )
         von
         = @post.user.name

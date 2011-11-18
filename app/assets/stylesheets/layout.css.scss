@@ -251,6 +251,13 @@ article {
 		size: 20px;
 		text-decoration: none;
 	}
+	.date {
+		width: 100%;
+		background: #000;
+		padding: 5px;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
 }
 .news_block:last-child {
 	margin-right: 0px;
@@ -336,7 +343,7 @@ article.material {
 
 
 /**** Slides Layout ****/
-#rotator_wrapper{
+.rotator{
 	height: 400px;
 	overflow: hidden;
 	background: #000;
@@ -349,8 +356,9 @@ article.material {
 	float: left;
 	margin: 0 0px 20px 0;
 }
-.slide_image {
+.slide {
 	position: relative;
+	margin: 0 0 20px 0;
 	.image img {
 		border-radius: 5px;
 	}

@@ -3,7 +3,7 @@
   #blocks
     - @posts.where(:topnews => true).order_by([:date_published, :desc]).take(3).each do |post|
       .news_block
-        %span.date
+        .date
           = date2dmy(post.date_published)
           -if post.user
             von
