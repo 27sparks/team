@@ -17,9 +17,23 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.atom
       format.json { render json: @posts }
     end
   end
+
+  def feed
+    @title = "Team.BERNER-Bikes.com News-Feed"
+    @posts = Post.all.order_by([:date_published, :desc])
+    @updated = @posts.first.updated_at unless @posts.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+      # we want the RSS feed to redirect permanently to the ATOM feed
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+    end
+  end
+
 
   # GET /posts/1
   # GET /posts/1.json

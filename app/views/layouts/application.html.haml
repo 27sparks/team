@@ -7,6 +7,7 @@
   = csrf_meta_tags
   = render 'partials/facebook_og_meta_tags'
 %body
+  = auto_discovery_link_tag :atom, feed_path
   = render 'partials/facebook'
   = render 'partials/admin'
   #wrap

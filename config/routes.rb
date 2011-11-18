@@ -24,6 +24,7 @@ Team2011::Application.routes.draw do
 
   match "/images/uploads/*path" => "gridfs#serve"
 
+  match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
