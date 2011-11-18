@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def feed
     @title = "Team.BERNER-Bikes.com News-Feed"
     @posts = Post.all.order_by([:date_published, :desc])
-    @updated = @posts.first.published unless @posts.empty?
+    @updated = @posts.first.date_published unless @posts.empty?
 
     respond_to do |format|
       format.atom { render :layout => false }
