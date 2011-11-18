@@ -6,7 +6,7 @@ atom_feed :language => 'de-DE' do |feed|
       feed.entry(post) do |entry|
         entry.title(post.title)
         entry.content(post.body, :type => 'html')
-
+        entry.date(post.date_published)
         entry.author do |author|
           author.name("Team.BERNER-Bikes.com")
         end
