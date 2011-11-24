@@ -19,7 +19,7 @@ class RidersController < ApplicationController
   end
 
   def list
-    @title = "News"
+    @title = "Team"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -30,6 +30,7 @@ class RidersController < ApplicationController
   # GET /riders/1
   # GET /riders/1.json
   def show
+    @title = @rider.name
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @rider }
