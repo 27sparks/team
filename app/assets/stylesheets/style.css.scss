@@ -70,7 +70,12 @@ body {
 	}
 	h1.team_header {
 		font-size: 20px;
-		padding: 10px;
+		background-image: url(menu_back.png);
+		background-repeat: x-repeat;
+		padding: 6px 0 7px 10px;
+		border-bottom: solid 3px #c00;
+		border-radius: 5px;
+		margin-bottom: 10px;
 	}
 	h2.rider_name {
 		font-size: 14px;
