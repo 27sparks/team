@@ -63,19 +63,8 @@ $shadow: #222;
 	#menu{
 		width: 976px;
 		background: #000;
-		background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0, #000000),
-			color-stop(1, #222222)
-		);
+		background-image: url(menu_back.png);
+		background-repeat: x-repeat;
 
 
 		text-align: left;
@@ -106,25 +95,13 @@ $shadow: #222;
 #footer {
 	clear: both;
 	background: #000;
-	background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
-	background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
-	background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
-	background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
-	background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #000000),
-		color-stop(1, #222222)
-	);
-
+	background-image: url(menu_back.png);
+	background-repeat: x-repeat;
 	border-bottom: solid 3px #c00;
 	border-radius: 5px;
 	margin-top: 20px;
 	text-align: center;
-	padding: 10px;
+	padding: 8px;
 }	
 
 

@@ -10,6 +10,7 @@ body {
 	font-family: Arial, sansserif;
 	color: #ddd;
 	background: #141414;
+	background-image: url(back.jpg);
 	font-size: 12px;
 
 	p {
@@ -45,23 +46,11 @@ body {
 
 #content{
 	h1.section_header {
-		font-size: 24px;
+		font-size: 20px;
 		color: #ddd;
 		background-color: #000;
-		background-image: linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -o-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -moz-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -webkit-linear-gradient(bottom, #000000 0%, #222222 100%);
-		background-image: -ms-linear-gradient(bottom, #000000 0%, #222222 100%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0, #000000),
-			color-stop(1, #222222)
-		);
-
+		background-image: url(menu_back.png);
+		background-repeat: x-repeat;
 		border-bottom: solid 3px #c00;
 		border-radius: 5px;
 	}
