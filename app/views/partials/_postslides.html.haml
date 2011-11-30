@@ -1,11 +1,11 @@
 .rotator
   - @posts.where(:slideshow => true).take(6).each do |post|
-    .slide{ :id => post.title.to_s }
-      .image= link_to (image_tag post.image(:slide).to_s), post_url(post.id)
-      .slide_tag
-        
-        %h1= post.title.to_s
-        %p= simple_format(preview(post.body, count = 200))
-        .logo
-          = image_tag 'LogoBerner.png'
-          News
+    .slidecontainer
+      .slide{ :id => post.title.to_s }
+        .image= link_to (image_tag post.image(:slide).to_s), post_url(post.id)
+        .slide_tag
+          %h1= post.title.to_s
+          %p= simple_format(preview(post.body, count = 200))
+          .logo
+            = image_tag 'LogoBerner.png'
+            News

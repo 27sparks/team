@@ -2,8 +2,9 @@
   %h1.section_header= link_to "Team", team_path
   .rider_rotator
     - @riders.each do |rider|
-      .slide{ :id => rider.name }
-        .image= link_to (image_tag rider.image(:medium).to_s), rider_url(rider.id)
-        .name_tag
-          .rider_logo= image_tag 'LogoBerner.png'
-          .rider_name= rider_name(rider)
+      .slidecontainer
+        .slide{ :id => rider.name }
+          .image= link_to (image_tag rider.image(:medium).to_s), rider_url(rider.id)
+          .name_tag
+            .rider_logo= image_tag 'LogoBerner.png'
+            .rider_name= rider_name(rider)
