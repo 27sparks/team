@@ -22,12 +22,12 @@
 
 #   slideshow(news_slide)
 $ ->
-  $('ul.rotator').cycle({
+  $('.rotator').cycle({
     fx: 'scrollLeft',
     pause: 1,
     delay: -3000
     })
-  $('ul.rider_rotator').cycle({
+  $('.rider_rotator').cycle({
     fx: 'fade',
     pause: 1,
     random: 1,
