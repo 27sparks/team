@@ -1,5 +1,5 @@
 .rotator
-  - @posts.where(:slideshow => true).take(6).each do |post|
+  - @posts.where(:slideshow => true).take(9).each do |post|
     .slidecontainer
       .slide{ :id => post.title.to_s }
         .image= link_to (image_tag post.image(:slide).to_s), post_url(post.id)

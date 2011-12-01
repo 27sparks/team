@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-  	@posts = Post.all
+  	@posts = Post.all.order_by([:date_published, :desc])
     @riders = Rider.all
    	@title = "Home"
     respond_to do |format|
