@@ -41,6 +41,7 @@ $ ->
   $('.gallery_rotator').cycle({
     fx: 'fade',
     pause: 1,
+    random: 1,
     delay: -4000
     })  
   $('#bilderslideshow').cycle({

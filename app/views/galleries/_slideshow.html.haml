@@ -5,8 +5,7 @@
         .slide{ :id => gallery.description.to_s }
           .image= link_to (image_tag gallery.image(:slide).to_s), gallery_url(gallery.id) 
           .slide_tag
-            %h1= gallery.description.to_s
-            %p= simple_format(preview(gallery.description, count = 200))
+            %h2= gallery.description
             .logo
               = image_tag 'LogoBerner.png'
-              Bilder
+              Diashow

@@ -1,5 +1,12 @@
-%h1.page_header Bilder
-=image_tag @gallery.image(:slide).to_s
-.description= @gallery.description
+%section.single_image
+  %h1.page_header=@gallery.description
+  .slide
+    =image_tag @gallery.image(:slide).to_s
+    .slide_tag
+      .logo
+        = image_tag 'LogoBerner.png'
+        .single_image Team.BERNER-Bikes.com
+
+%p=link_to "Slideshow anschauen >>", bilder_path
 
 =render "moreimages"

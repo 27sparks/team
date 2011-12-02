@@ -287,7 +287,6 @@ article.fahrer {
 	}
 }
 
-
 /**** Material Layout ****/
 
 article.material {
@@ -319,7 +318,16 @@ article.material {
 }
 
 /***** Galleries *****/
-
+.single_image {
+	.slide_tag{
+		background: transparent;
+		border: 0px;
+		.logo {
+			width: 200px;
+			color: #fff;
+		}
+	}
+}
 #more_images {
 	margin: 20px 0 0 0;
 	img {

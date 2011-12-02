@@ -119,9 +119,18 @@ body {
 		    font-size: 20px;
 		    margin: 10px 0 0 10px;
 		}
+		h2 {
+		    font-size: 16px;
+		    margin: 10px 0 0 10px;	
+		}
 		.logo {
 			font-size: 24px;
 			color: #c00;
+			.single_image {
+				line-height: 18px;
+				font-size: 14px;
+				color: #fff;
+			}
 		}
 		p {
 			font-size: 12px;
