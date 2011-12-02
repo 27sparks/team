@@ -1,4 +1,6 @@
 Team2011::Application.routes.draw do
+  resources :galleries
+
   resources :posts
   resources :riders
   resources :users
@@ -19,6 +21,7 @@ Team2011::Application.routes.draw do
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'
   match 'register' => 'users#new'
+  match 'bilder' => 'galleries#list'
   
   match 'fahrer/:id' => 'riders#show'
 

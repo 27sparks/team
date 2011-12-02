@@ -1,0 +1,5 @@
+#more_images
+  - if (@galleries)
+    - @galleries.each do |gallery|
+      .image
+        = link_to (image_tag gallery.image(:thumb).to_s), gallery_url(gallery.id) 

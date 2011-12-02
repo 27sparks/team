@@ -318,6 +318,16 @@ article.material {
 	}
 }
 
+/***** Galleries *****/
+
+#more_images {
+	margin: 20px 0 0 0;
+	img {
+		float:left;
+	}
+}
+
+
 
 /**** Slides Layout ****/
 .rotator{
@@ -329,7 +339,7 @@ article.material {
 	box-shadow: 0px 0px 10px $shadow;
 
 }
-#riderslideshow {
+#riderslideshow, #galleryslideshow {
 	width: 220px;
 	float: left;
 	margin: 0 0px 20px 0;
@@ -392,12 +402,6 @@ article.material {
 	display: block;
 	float: left;
 	margin: 0 30px 20px 30px;
-}
-
-#social {
-	width: 220px;
-	display: block;
-	float: left;
 }
 
 

@@ -17,6 +17,7 @@ gem 'therubyracer'
 gem 'rake'
 gem 'jquery-rails'
 gem 'haml'
+gem 'haml-rails'
 gem 'rmagick'
 gem 'capistrano'
 gem "mongoid", "~> 2.3"

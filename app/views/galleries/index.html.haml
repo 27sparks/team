@@ -1,0 +1,25 @@
+%section#galleries
+  - if can? :create, @gallery
+    .new= link_to 'Bild einstellen', new_gallery_path
+
+  %h1.page_header Bilder
+
+  %table
+    %tr
+      %th Bild
+      %th Beschreibung
+      %th
+      %th
+      %th
+
+    - @galleries.each do |gallery|
+      %tr
+        %td
+          =image_tag gallery.image(:thumb).to_s
+        %td= gallery.description
+        %td= link_to 'Show', gallery
+        %td= link_to 'Edit', edit_gallery_path(gallery)
+        %td= link_to 'Destroy', gallery, :confirm => 'Are you sure?', :method => :delete
+
+  - if can? :create, @gallery
+    .new= link_to 'Bild einstellen', new_gallery_path

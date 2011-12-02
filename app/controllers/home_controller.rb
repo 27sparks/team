@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   	@posts = Post.all.order_by([:date_published, :desc])
     @riders = Rider.all
    	@title = "Home"
+    @galleries = Gallery.all
+    
     respond_to do |format|
       format.html # index.html.erb}
       format.json { render json: @posts }

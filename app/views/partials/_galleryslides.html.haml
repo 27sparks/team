@@ -1,0 +1,9 @@
+#galleryslideshow
+  %h1.section_header= link_to "Bilder"
+  .gallery_rotator
+    - if (@galleries)
+      - @galleries.each do |gallery|
+        .slidecontainer
+          .slide{ :id => gallery.description }
+            .image= link_to (image_tag gallery.image(:medium).to_s), gallery_url(gallery.id)
+

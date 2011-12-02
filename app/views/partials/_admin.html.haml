@@ -6,6 +6,8 @@
       %span.admin_link= link_to 'Fahrer', riders_path
     - if can? :index, @users
       %span.admin_link= link_to 'Benutzer', users_path
+    - if can? :index, @galleries
+      %span.admin_link= link_to 'Bilder', galleries_path
     - if can? :destroy, @session
       .admin_link.logout= link_to 'ausloggen', logout_path    
 
