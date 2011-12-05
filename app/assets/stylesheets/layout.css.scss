@@ -135,6 +135,7 @@ $shadow: #222;
 		padding: 7px 0 5px 10px;	
 		margin-bottom: 20px;
 	}
+
 	h1.page_header {
 		padding: 7px 0 7px 10px;
 		margin-bottom: 20px;
@@ -410,6 +411,29 @@ article.material {
 	display: block;
 	float: left;
 	margin: 0 30px 20px 30px;
+}
+
+/**** PAGINATION *****/
+nav.pagination {
+	text-align: center;
+	.page {
+		padding: 3px 2px 2px 5px;
+		margin-right: 3px;
+		border: solid 2px #400;
+		border-radius: 5px;
+		background: #600;
+	}
+	.current {
+		background: #c00;
+	}
+	.next, .last, .prev, .first{
+		padding: 3px 2px 2px 5px;
+		margin-right: 3px;
+		border: solid 2px #400;
+		border-radius: 5px;
+		background: #600;
+
+	}
 }
 
 
