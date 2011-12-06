@@ -180,7 +180,7 @@ body {
 #fahrer_display .admin_buttons, .news_item .admin_buttons, .single_image .admin_buttons {
 	position: relative;
 	float: right;
-	margin: 5px 10px;
+	margin: 3px 10px;
 }
 .fahrer .admin_buttons {
 	top: -5px;
@@ -199,7 +199,7 @@ body {
 		font-size: 18px;
 		font-weight: bold;
 		color: #666;
-		padding: 0px 4px;
+		padding: 0px 5px;
 		border-radius: 15px;
 		background: #006;
 		border: solid 2px #666;	
@@ -231,17 +231,27 @@ body {
 	display: inline;
 	a {
 		font-weight: bold;
+		font-size: 18px;
 		color: #090;
 		float:right;
-		margin: -3px 10px 0px;	
-		padding: 0 5px;
+		margin: -3px 17px 0px;	
+		padding: 1px 4px;
 		border-radius: 15px;
-		border: 2px solid #222;	
-		background: #444;	
+		border-top: 2px solid #222;
+		border-left: 3px solid #222;
+		border-right: 3px solid #333;	
+		border-bottom: 2px solid #333;
+		background: #3a3a3a;	
 	}
 	a:hover {
 		color: #0f0;
-		background: #666;	
-
+		background: #4a4a4a;	
 	}
+
+}
+#fahrer_display .admin_buttons a{
+		border-top: 2px solid #222;
+		border-left: 3px solid #222;
+		border-right: 3px solid #333;	
+		border-bottom: 2px solid #333;
 }
