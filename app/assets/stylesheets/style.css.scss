@@ -188,7 +188,7 @@ body {
 }
 .admin_link_pict {
 	display: inline;
-	line-height: 20px;
+	margin-top:10px;
 }
 
 
@@ -196,13 +196,13 @@ body {
 	display: inline;
 	a {	
 		line-height:0;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
-		color: #aaa;
+		color: #666;
 		padding: 0px 4px;
 		border-radius: 15px;
-		background: #00a;
-		border: solid 2px #aaa;	
+		background: #006;
+		border: solid 2px #666;	
 	}
 	a:hover {
 		color: #fff;
@@ -213,13 +213,13 @@ body {
 .admin_link_delete {
 	display: inline;	
 	a {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
-		color: #aaa;
+		color: #666;
 		padding: 0px 4px;
 		border-radius: 15px;
-		background: #a00;
-		border: solid 2px #aaa;	
+		background: #600;
+		border: solid 2px #666;	
 	}
 	a:hover {
 		color: #fff;
