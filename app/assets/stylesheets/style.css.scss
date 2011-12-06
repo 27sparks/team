@@ -235,12 +235,9 @@ body {
 		color: #090;
 		float:right;
 		margin: -3px 17px 0px;	
-		padding: 1px 4px;
+		padding: 1px 4px 2px;
 		border-radius: 15px;
-		border-top: 2px solid #222;
-		border-left: 3px solid #222;
-		border-right: 3px solid #333;	
-		border-bottom: 2px solid #333;
+		border: 2px solid #222;
 		background: #3a3a3a;	
 	}
 	a:hover {
@@ -250,8 +247,6 @@ body {
 
 }
 #fahrer_display .admin_buttons a{
-		border-top: 2px solid #222;
-		border-left: 3px solid #222;
-		border-right: 3px solid #333;	
-		border-bottom: 2px solid #333;
+		border: 2px solid #222;
+		
 }
