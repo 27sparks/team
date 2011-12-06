@@ -1,13 +1,14 @@
 %section#news
-  - if can? :create, @user
-    .new= link_to 'Neuer Benutzer', register_path
-  %h1.page_header Benutzer-Übersicht
+
+  %h1.page_header 
+    Benutzer-Übersicht
+    - if can? :create, @user
+      .admin_link_inline= link_to '+', register_path
   %article
     %table
       %tr
         %th Name
         %th Admin
-        %th
         %th
         %th
 
@@ -24,8 +25,5 @@
               Autor
             - else 
               X    
-          %td= link_to (image_tag ('show.png')), user
-          %td= link_to (image_tag ('edit.png')), edit_user_path(user)
-          %td= link_to (image_tag ('delete.png')), user, confirm: 'Sind Sie sicher?', method: :delete
-  - if can? :create, @user
-    .new= link_to 'Neuer Benutzer', register_path  
+          %td= link_to 'bearbeiten', edit_user_path(user)
+          %td= link_to 'löschen', user, confirm: 'Sind Sie sicher?', method: :delete

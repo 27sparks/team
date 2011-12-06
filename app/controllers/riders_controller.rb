@@ -30,7 +30,7 @@ class RidersController < ApplicationController
   # GET /riders/1
   # GET /riders/1.json
   def show
-    @title = @rider.name
+    @title = @rider.first_name + ' ' + @rider.name 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @rider }
@@ -46,7 +46,7 @@ class RidersController < ApplicationController
   def create
     respond_to do |format|
       if @rider.save
-        format.html { redirect_to riders_url, notice: 'Rider was successfully created.' }
+        format.html { redirect_to @rider, notice: 'Rider was successfully created.' }
         format.json { render json: @rider, status: :created, location: @rider }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class RidersController < ApplicationController
   def update
     respond_to do |format|
       if @rider.update_attributes(params[:rider])
-        format.html { redirect_to riders_url, notice: 'Rider was successfully updated.' }
+        format.html { redirect_to @rider, notice: 'Rider was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -75,7 +75,7 @@ class RidersController < ApplicationController
     @rider.destroy
 
     respond_to do |format|
-      format.html { redirect_to riders_url }
+      format.html { redirect_to team_path }
       format.json { head :ok }
     end
   end
