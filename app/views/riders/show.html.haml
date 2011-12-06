@@ -1,6 +1,8 @@
 %p#notice= notice 
-%section#fahrer
-  %h1.page_header= rider_name(@rider) 
+%section#fahrer_display
+  %h1.page_header
+    = rider_name(@rider)
+    = render 'admin_buttons', :rider => @rider
   %article.fahrer
     .rider_image
       =image_tag @rider.image(:medium).to_s
@@ -21,5 +23,3 @@
         %li
           Erfolge:
           %em= simple_format(@rider.description)
-     
-    = link_to 'zurück', team_path

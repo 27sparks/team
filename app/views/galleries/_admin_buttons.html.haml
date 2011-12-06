@@ -1,0 +1,5 @@
+.admin_buttons
+  - if can? :edit, @gallery
+    .admin_link_edit= link_to "=", edit_gallery_path(gallery)
+  - if can? :destroy, @gallery
+    .admin_link_delete= link_to "X", gallery, confirm: 'Sind Sie sicher?', method: :delete

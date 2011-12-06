@@ -1,5 +1,8 @@
 #galleryslideshow
-  %h1.section_header= link_to "Bilder"
+  %h1.section_header
+    = link_to "Bilder"
+    - if can? :create, @gallery
+      .admin_link_inline= link_to '+', new_gallery_path
   .gallery_rotator
     - if (@galleries)
       - @galleries.each do |gallery|

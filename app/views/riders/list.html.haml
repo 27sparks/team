@@ -1,20 +1,17 @@
 #fahrer
-  %h1.page_header Team
+  %h1.page_header 
+    Team
+    - if can? :create, @rider
+      .admin_link_inline= link_to '+', new_rider_path
   %section.team
     %h1.team_header= ELITE_TEAM
     - @riders.where( :team => ELITE_TEAM ).order_by([:order, :asc]).each do |rider|
-      .fahrer
-        = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)
+      = render 'fahrer', :rider => rider
   %section.team
     %h1.team_header= WOMEN_TEAM
     - @riders.where( :team => WOMEN_TEAM ).order_by([:order, :asc]).each do |rider|
-      .fahrer
-        = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)
+      = render 'fahrer', :rider => rider
   %section.team
     %h1.team_header= MASTERS_TEAM
     - @riders.where( :team => MASTERS_TEAM ).order_by([:order, :asc]).each do |rider|
-      .fahrer
-        = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
-        %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)
+      = render 'fahrer', :rider => rider

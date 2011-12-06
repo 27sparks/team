@@ -1,13 +1,10 @@
 %p#notice= notice 
 %section#news
   %article.news_item
-    %h1.article_header= @post.title
-    .date 
-      - if ( @post.user && @post.date_published )
-        von
-        = @post.user.name
-        am
-        = date2dmy(@post.date_published)
+    %h1.page_header
+      = @post.title
+      = render 'admin_buttons', :post => @post
+    =render 'namedate', :post => @post
     -if (@post.second_image.exists?)
       .first_image
         = image_tag @post.second_image(:medium).to_s
@@ -28,7 +25,6 @@
           = image_tag @post.image(:slide).to_s
           = @post.first_image_tag
     .post_bottom
-      .backlink= link_to 'zurück zur News-Seite >>', news_path
       .fb-like= render ('fb_like')
 
 #news_row

@@ -1,5 +1,8 @@
 #riderslideshow
-  %h1.section_header= link_to "Team", team_path
+  %h1.section_header
+    = link_to "Team", team_path
+    - if can? :create, @rider
+      .admin_link_inline= link_to '+', new_rider_path
   .rider_rotator
     - @riders.each do |rider|
       .slidecontainer

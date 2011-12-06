@@ -1,1 +1,8 @@
-= render 'partials/postlist'
+%section#news
+  %h1.page_header 
+    News 
+    - if can? :create, @post
+      .admin_link_inline= link_to '+', new_post_path
+  - @posts.each do |post|
+    = render 'post', :post => post
+  = paginate @posts

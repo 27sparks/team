@@ -1,0 +1,8 @@
+%article.news_list_item
+  %h1.article_list_header= link_to post.title, post_url(post.id)
+  = render 'admin_buttons', :post => post
+  = render 'namedate', :post => post
+  - if (post.image.exists?)
+    .postlist_image=image_tag post.image(:thumb).to_s 
+  %p= simple_format(preview(post.body))
+  .more= link_to 'mehr', post_url(post.id)

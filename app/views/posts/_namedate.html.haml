@@ -1,0 +1,8 @@
+.namedate 
+  - if (post.user && post.date_published)
+    von
+    = post.user.name
+    am
+    = date2dmy(post.date_published)
+  - else 
+    = date2dmy(post.date_published)

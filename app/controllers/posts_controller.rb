@@ -81,7 +81,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to posts_url, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -96,7 +96,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to news_url }
       format.json { head :ok }
     end
   end

@@ -58,7 +58,10 @@ body {
 
 	h1.page_header {
 		font-size: 24px;
-		border-bottom: 1px solid #666;
+		background-image: url(menu_back.png);
+		background-repeat: repeat-x;
+		border-radius: 5px;
+
 	}
 	h1.article_header{ 
 		font-size: 24px;
@@ -72,11 +75,8 @@ body {
 	}
 	h1.team_header {
 		font-size: 20px;
-		background-image: url(menu_back.png);
-		background-repeat: repeat-x;
-		padding: 6px 0 7px 10px;
-		border-bottom: solid 3px #111;
-		border-radius: 5px;
+		border-bottom: 2px solid #600;
+		padding: 6px 0 4px 10px;
 		margin-bottom: 10px;
 	}
 	h2.rider_name {
@@ -108,7 +108,7 @@ body {
 		font-weight: bold;
 		background: #000;
 		padding: 4px;
-		vertical-align: middle;
+		vertical-align: left;
 	}
 	td {
 		padding: 4px 10px;
@@ -169,4 +169,79 @@ body {
 }
 #sparks {
 	text-align: right;
+}
+
+/***** ADMIN BUTTONS *********/
+.admin_buttons {
+	position: absolute;
+	top: -7px;
+	right: 7px;
+}
+#fahrer_display .admin_buttons, .news_item .admin_buttons, .single_image .admin_buttons {
+	position: relative;
+	float: right;
+	margin: 5px 10px;
+}
+.fahrer .admin_buttons {
+	top: -5px;
+	right: -5px;
+}
+.admin_link_pict {
+	display: inline;
+	line-height: 20px;
+}
+
+
+.admin_link_edit {
+	display: inline;
+	a {	
+		line-height:0;
+		font-size: 20px;
+		font-weight: bold;
+		color: #aaa;
+		padding: 0px 4px;
+		border-radius: 15px;
+		background: #00a;
+		border: solid 2px #aaa;	
+	}
+	a:hover {
+		color: #fff;
+		background: #00f;	
+		border-color: #fff;
+	}
+}
+.admin_link_delete {
+	display: inline;	
+	a {
+		font-size: 20px;
+		font-weight: bold;
+		color: #aaa;
+		padding: 0px 4px;
+		border-radius: 15px;
+		background: #a00;
+		border: solid 2px #aaa;	
+	}
+	a:hover {
+		color: #fff;
+		background: #f00;	
+		border-color: #fff;
+	}
+}
+.admin_link_inline {
+	display: inline;
+	a {
+		font-weight: bold;
+		color: #090;
+		float:right;
+		margin: -3px 10px 0px;	
+		padding: 0 5px;
+		border-radius: 15px;
+		border: 2px solid #222;	
+		background: #444;	
+	}
+	a:hover {
+		color: #0f0;
+		background: #666;	
+
+	}
 }

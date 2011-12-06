@@ -1,0 +1,9 @@
+.admin_buttons
+  - if can? :edit, @post
+    - if (post.slideshow == true)
+      .admin_link_pict= image_tag("dia.png", :alt => "In der Slideshow")
+    - if (post.topnews == true)
+      .admin_link_pict= image_tag("top_news.png", :alt => "In den Top News")    
+    .admin_link_edit= link_to "=", edit_post_path(post)
+  - if can? :destroy, @post
+    .admin_link_delete= link_to "X", post, confirm: 'Sind Sie sicher?', method: :delete

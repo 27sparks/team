@@ -1,8 +1,8 @@
 %section#galleries
-  - if can? :create, @gallery
-    .new= link_to 'Bild einstellen', new_gallery_path
-
-  %h1.page_header Bilder
+  %h1.page_header 
+    Bilder
+    - if can? :create, @gallery
+      .admin_link_inline= link_to '+', new_gallery_path
 
   %table
     %tr
@@ -20,6 +20,3 @@
         %td= link_to 'Show', gallery
         %td= link_to 'Edit', edit_gallery_path(gallery)
         %td= link_to 'Destroy', gallery, :confirm => 'Are you sure?', :method => :delete
-
-  - if can? :create, @gallery
-    .new= link_to 'Bild einstellen', new_gallery_path

@@ -1,3 +1,7 @@
-%h1.page_header Bilder
+%h1.page_header 
+  Bilder
+  - if can? :create, @gallery
+    .admin_link_inline= link_to '+', new_gallery_path
+
 =render 'slideshow'
 =render 'moreimages'

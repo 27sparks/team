@@ -15,8 +15,8 @@ $shadow: #222;
 #admin {
     position: static;
     top: 0px;
-    background: #3f6;
-    padding: 10px;
+    background: #ddd;
+    padding: 10px 10px 6px;
     text-align: left;
    	.admin_link{
 		font-size: 12px;
@@ -24,14 +24,11 @@ $shadow: #222;
 		a { 
 			color: #000;
 			font-weight: bold;
-			background: #ddd;
 			padding: 5px;
-			border-radius: 5px;
-			box-shadow: 0px 0px 5px #000;
 		}
 		a:hover {
 			color: #d00;
-			background: #000;
+			border-bottom: solid 4px #d00;
 		}
 		.logout{
 			float:right;
@@ -144,13 +141,22 @@ $shadow: #222;
 		margin: 0 10px 0 10px;
 	}
 	.news_item {
+		position:relative;
 		margin-bottom: 80px;
 		p {
 			margin-left: 0px;
 		}
 	}
 	.news_list_item {
-		margin-bottom: 30px;
+		position: relative;
+		padding: 10px 0px;
+		margin-bottom: 15px;
+		border: 2px solid transparent;
+		min-height: 125px;
+	}
+	.news_list_item:hover {
+		background: #111;
+		border: 2px solid #222;
 	}
 	section.team {
 		display: block;
@@ -252,8 +258,12 @@ article {
 }
 
 /**** Fahrer layout ****/
-
+#fahrer {
+	display: block;
+	position:relative;
+}
 .fahrer {
+	position: relative;
 	display: block;
 	float: left;
 	width: 160px;
@@ -264,6 +274,7 @@ article {
 	}
 }
 article.fahrer {
+	position: relative;
 	width: 708px;
 	overflow: hidden;
 	margin-bottom: 20px;
@@ -416,6 +427,8 @@ article.material {
 
 /**** PAGINATION *****/
 nav.pagination {
+	padding: 10px 20px;
+	margin: 10px 0;
 	text-align: center;
 	.page {
 		padding: 3px 2px 2px 5px;
@@ -447,28 +460,22 @@ nav.pagination {
 		text-align: right;
  	}
 }
-
+#content {
+	form {
+		margin-bottom: 20px;
+	}
+}
 .new {
-	padding: 8px;
-	background: #3f6;
 	display: block;
-	float: right;
-	border-radius: 5px;
-	margin-bottom: 20px;
+	margin: 10px 10px;
 	a {
-		color: #000;
-		font-weight: bold;
+		font-weight: normal;
 		font-size: 14px;
 	}
 	a:hover {
-		color: #f00;
+		border-bottom: solid 4px #d00;
 	}
 }
 .backlink {
 	margin: 20px 0 30px;
-}
-.pagination {
-	padding: 10px 20px;
-	margin: 10px 0;
-	background: #000;
 }

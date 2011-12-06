@@ -1,5 +1,7 @@
 %section.single_image
-  %h1.page_header=@gallery.description
+  %h1.page_header
+    =@gallery.description
+    = render 'admin_buttons', :gallery => @gallery
   .slide
     =image_tag @gallery.image(:slide).to_s
     .slide_tag

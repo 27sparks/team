@@ -1,0 +1,4 @@
+.fahrer
+  = render 'admin_buttons', :rider => rider
+  = link_to (image_tag rider.image(:team).to_s), rider_url(rider.id) 
+  %h2.rider_name= link_to rider_name(rider), rider_url(rider.id)

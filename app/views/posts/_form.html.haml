@@ -27,9 +27,10 @@
     %table
       %tr
         %td  
-          = f.label 'Bild 1:'
+          = f.label 'Bild 1: '
           = f.file_field :image
           %br
+          = f.label 'Bildunterschrift:  '
           = f.text_field :first_image_tag
         - if (@post.image.exists?)
           %td
@@ -40,9 +41,10 @@
     %table
       %tr
         %td  
-          = f.label 'Bild 2:'
+          = f.label 'Bild 2: '
           = f.file_field :second_image
           %br
+          = f.label 'Bildunterschrift: '
           = f.text_field :second_image_tag
         - if (@post.second_image.exists?)
           %td
@@ -50,4 +52,4 @@
             %br 
             =image_tag @post.second_image(:thumb).to_s
   .actions
-    = f.submit 'Erstellen'
+    = f.submit 'Speichern'

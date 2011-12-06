@@ -1,0 +1,5 @@
+.admin_buttons
+  - if can? :edit, @rider
+    .admin_link_edit= link_to "=", edit_rider_path(rider)
+  - if can? :destroy, @rider
+    .admin_link_delete= link_to "X", rider, confirm: 'Sind Sie sicher?', method: :delete

@@ -1,7 +1,8 @@
 %section#news
-  - if can? :create, @post
-    .new= link_to 'Nachricht erstellen', new_post_path
-  %h1.page_header News-Übersicht
+  %h1.page_header 
+    News-Übersicht
+    - if can? :create, @post
+      .admin_link_inline= link_to '+', new_post_path
   %article
     %table
       %tr
@@ -34,6 +35,4 @@
               Topnews  
           %td= link_to "bearbeiten", edit_post_path(post)
           %td= link_to "löschen", post, confirm: 'Sind Sie sicher?', method: :delete
-    = paginate @posts    
-  - if can? :create, @post
-    .new= link_to 'Nachricht erstellen', new_post_path
+    = paginate @posts

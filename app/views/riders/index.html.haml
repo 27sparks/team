@@ -1,7 +1,8 @@
 %section#fahrer
-  - if can? :create, @rider
-    .new= link_to 'Neuer Fahrer', new_rider_path
-  %h1.page_header Fahrer-Übersicht
+  %h1.page_header 
+    Fahrer-Übersicht
+    - if can? :create, @rider
+      .admin_link_inline= link_to '+', new_rider_path
   %article
     %table
       %tr
@@ -20,5 +21,3 @@
           %td= date2dmy(rider.geburtstag)
           %td= link_to "bearbeiten", edit_rider_path(rider)
           %td= link_to "löschen", rider, confirm: 'Sind Sie sicher?', method: :delete
-  - if can? :create, @rider
-    .new= link_to 'Neuer Fahrer', new_rider_path
