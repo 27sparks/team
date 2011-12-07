@@ -9,7 +9,7 @@ $shadow: #222;
 
 #wrap {
 	width: 1000px; 
-	margin: 20px auto 400px;
+	margin: 20px auto 50px;
 	padding: 0 20px;
 }
 #admin {
@@ -208,8 +208,8 @@ article {
 	clear: both;
 	margin-bottom: 30px;
 	padding: 10px;
-	background: #000;
-	border-radius:5px;
+	background: #111;
+	border: 2px solid #222;
 	.headline {
 		margin-bottom: 5px;
 	}
