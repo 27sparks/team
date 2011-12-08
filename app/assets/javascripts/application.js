@@ -8,5 +8,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.cycle.all.js
-//= require jquery.curvycorners.source.js
 //= require_tree .
