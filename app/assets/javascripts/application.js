@@ -4,7 +4,9 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
+//= require html5_for_ie.js
 //= require jquery
 //= require jquery_ujs
-//= require jquery.curvycorners.min.js
+//= require jquery.cycle.all.js
+//= require jquery.curvycorners.source.js
 //= require_tree .

@@ -1,0 +1,11 @@
+-if (@post.second_image.exists?)
+  .first_image
+    = image_tag @post.second_image(:medium).to_s
+    %br
+    = @post.second_image_tag
+-else
+  - if (@post.image.exists?)
+    .first_image
+      = image_tag @post.image(:medium).to_s
+      %br
+      = @post.first_image_tag

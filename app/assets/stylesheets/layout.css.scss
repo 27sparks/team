@@ -45,8 +45,9 @@ $shadow: #222;
 	#social_bar {
 		float:right;
 		width: 280px;
+		height: 32px;
 		text-align:right;
-		margin-top: -2px;
+		margin: -2px 0 0 0;
 	}
 	.social{
 		display: inline;
@@ -62,11 +63,10 @@ $shadow: #222;
 	}
 	#menu{
 		width: 976px;
+		height: 18px;
 		background: #000;
 		background-image: url(menu_back.png);
 		background-repeat: repeat-x;
-
-
 		text-align: left;
 		padding: 7px 20px 8px 5px;
 		border-radius: 5px;
@@ -78,6 +78,9 @@ $shadow: #222;
 		.logo {
 			float: left;
 			margin: -2px 10px 0 0;
+		}
+		.links {
+			float: left;
 		}
 		img:hover {
 			-webkit-transform:rotate(5deg);
@@ -108,6 +111,7 @@ $shadow: #222;
 	margin-top: 20px;
 	text-align: center;
 	padding: 8px;
+	height:17px;
 }	
 
 
@@ -161,8 +165,9 @@ $shadow: #222;
 		}
 	}
 	.news_list_item {
+		clear: both;
 		position: relative;
-		padding: 10px 0px;
+		padding: 10px 0px 10px 0;
 		margin-bottom: 15px;
 		border: 2px solid transparent;
 		height: 125px;
@@ -187,10 +192,10 @@ $shadow: #222;
 article {
 	padding: 0px 10px 20px 0px;
 	p {
-		margin-bottom: 10px;
+		clear: right;
+		margin:10px 0 10px 0;
 	}
 	.first_image, .second_image {
-		display: block;
 		color: #444;
 		img {
 			border-radius: 5px;
@@ -201,13 +206,8 @@ article {
 		}
 	}
 	.first_image {
-		width: 240px;
 		float: left;
 		margin: 10px 20px 10px 0px;
-		img {
-			width: 240px;
-			height: 240px;
-		}
 	}
 	.second_image {
 		clear: both;
@@ -224,9 +224,6 @@ article {
 	.fb-like {
 		float: right;
 		margin-top: 15px;
-	}
-	.backlink {
-		float: right;
 	}
 
 }
@@ -458,7 +455,8 @@ article.material {
  	border-bottom: 1px solid #222;
  	opacity: 0.8;
  	h1 {
- 		width: 750px;
+ 		width: 650px;
+ 		height: 20px;
  	}
  	.logo {
  		position: absolute;
