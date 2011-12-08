@@ -15,14 +15,12 @@
           = image_tag @post.image(:medium).to_s
           %br
           = @post.first_image_tag
-   
-           
     %p
       = simple_format(@post.body)
-      - if (@post.image.exists? && (@post.slideshow || @post.second_image.exists?))
-        .second_image
-          = image_tag @post.image(:slide).to_s
-          = @post.first_image_tag
+    - if (@post.image.exists? && (@post.slideshow || @post.second_image.exists?))
+      .second_image
+        = image_tag @post.image(:slide).to_s
+        = @post.first_image_tag
     .post_bottom
       .fb-like= render ('fb_like')
 

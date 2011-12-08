@@ -6,6 +6,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require roundrect.js
 //= require_tree .
-RoundRect.run()
