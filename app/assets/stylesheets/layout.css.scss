@@ -52,6 +52,9 @@ $shadow: #222;
 		display: inline;
 		img {
 			border-radius: 3px;
+			-moz-border-radius:3px;
+	 		-webkit-border-radius: 3px;
+	    	-o-border-radius: 3px;
 		}
 		img:hover {
 			-webkit-transform:rotate(5deg);
@@ -67,6 +70,9 @@ $shadow: #222;
 		text-align: left;
 		padding: 7px 20px 8px 5px;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;		
 		border-bottom: solid 3px #c00;
 
 		.logo {
@@ -96,6 +102,9 @@ $shadow: #222;
 	background-repeat: repeat-x;
 	border-bottom: solid 3px #c00;
 	border-radius: 5px;
+	-moz-border-radius:5px;
+ 	-webkit-border-radius: 5px;
+    -o-border-radius: 5px;
 	margin-top: 20px;
 	text-align: center;
 	padding: 8px;
@@ -107,6 +116,9 @@ $shadow: #222;
 	width: 220px;
 	padding: 10px 10px 30px 10px;
 	border-radius: 5px;
+	-moz-border-radius:5px;
+ 	-webkit-border-radius: 5px;
+    -o-border-radius: 5px;	
 	float: right;
 	margin-bottom: 20px;
 	background: #fff;
@@ -185,6 +197,9 @@ article {
 		width: 240px;
 		img {
 			border-radius: 5px;
+			-moz-border-radius:5px;
+	 		-webkit-border-radius: 5px;
+	    	-o-border-radius: 5px;		
 			margin-bottom: 3px;
 		}
 	}
@@ -230,6 +245,9 @@ article {
 		display: block;
 		margin: 5px 10px 5px 0px;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;		
 	}
 	h1 a {
 		size: 20px;
@@ -240,6 +258,9 @@ article {
 		background: #000;
 		padding: 5px 0px;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;		
 		margin-bottom: 0px;
 		margin-left:0px;
 	}
@@ -253,6 +274,9 @@ article {
 .postlist_image {
 	float: left;
 	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
 	margin: 10px;
 	overflow:hidden;	
 }
@@ -271,6 +295,9 @@ article {
 	margin: 0px 20px 20px 0;
 	img {
 		border-radius: 5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
 	}
 }
 article.fahrer {
@@ -305,11 +332,17 @@ article.fahrer {
 article.material {
 	img {
 		border-radius:5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
 	}
 	.image {
 	    position: relative;
 	    background: #222;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;
 		margin-bottom: 20px;
 		.subtext {
 			margin-top: -70px;
@@ -327,6 +360,9 @@ article.material {
 #material {
 	img {
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;		
 	}
 }
 
@@ -357,6 +393,9 @@ article.material {
 	background: #000;
 	margin-bottom: 30px;
 	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
 	box-shadow: 0px 0px 10px $shadow;
 
 }
@@ -370,10 +409,16 @@ article.material {
 	margin: 0 0 20px 0;
 	.image img {
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;		
 	}
 }
 .name_tag{
 	border-radius: 5px;
+	-moz-border-radius:5px;
+ 	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
 	width: 200px;
 	position: absolute;
 	left: 0px;
@@ -435,6 +480,9 @@ nav.pagination {
 		margin-right: 3px;
 		border: solid 2px #400;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;
 		background: #600;
 	}
 	.current {
@@ -445,6 +493,9 @@ nav.pagination {
 		margin-right: 3px;
 		border: solid 2px #400;
 		border-radius: 5px;
+		-moz-border-radius:5px;
+	 	-webkit-border-radius: 5px;
+	    -o-border-radius: 5px;
 		background: #600;
 
 	}
