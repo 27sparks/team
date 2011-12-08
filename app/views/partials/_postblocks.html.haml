@@ -4,8 +4,8 @@
     - if can? :create, @post
       .admin_link_inline= link_to '+', new_post_path
   #blocks
-    - @posts.where(:topnews => true).order_by([:date_published, :desc]).take(3).each do |post|
-      .news_block
+    - @posts.where(:topnews => true).order_by([:date_published, :desc]).take(3).each_with_index do |post, i|
+      .news_block{ :class => "block-" + i.to_s }
         .date
           = date2dmy(post.date_published)
           -if post.user
