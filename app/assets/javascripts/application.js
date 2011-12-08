@@ -6,5 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require curvycorners.js
+//= require roundrect.js
 //= require_tree .
+RoundRect.run()
