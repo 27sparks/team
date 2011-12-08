@@ -4,18 +4,20 @@
       = @post.title
       = render 'admin_buttons', :post => @post
     =render 'namedate', :post => @post
-    -if (@post.second_image.exists?)
-      .first_image
-        = image_tag @post.second_image(:medium).to_s
-        %br
-        = @post.second_image_tag
-    -else
-      - if (@post.image.exists?)
-        .first_image
-          = image_tag @post.image(:medium).to_s
-          %br
-          = @post.first_image_tag
     %p
+
+      -if (@post.second_image.exists?)
+        .first_image
+          = image_tag @post.second_image(:medium).to_s
+          %br
+          = @post.second_image_tag
+      -else
+        - if (@post.image.exists?)
+          .first_image
+            = image_tag @post.image(:medium).to_s
+            %br
+            = @post.first_image_tag
+
       = simple_format(@post.body)
     - if (@post.image.exists? && (@post.slideshow || @post.second_image.exists?))
       .second_image
