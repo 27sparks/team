@@ -190,11 +190,8 @@ article {
 		margin-bottom: 10px;
 	}
 	.first_image, .second_image {
-		float: left;
 		display: block;
-		margin: 10px 10px 10px 0px;
 		color: #444;
-		width: 240px;
 		img {
 			border-radius: 5px;
 			-moz-border-radius:5px;
@@ -203,8 +200,23 @@ article {
 			margin-bottom: 3px;
 		}
 	}
+	.first_image {
+		width: 240px;
+		float: left;
+		margin: 10px 10px 10px 0px;
+		img {
+			width: 240px;
+			height: 240px;
+		}
+	}
 	.second_image {
 		clear: both;
+		margin: 10px 0px 10px 0px;
+
+		img {
+			width: 720px;
+			height: 400px;
+		}
 	}
 	.post_bottom {
 		clear: both;
