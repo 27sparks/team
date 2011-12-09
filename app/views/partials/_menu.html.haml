@@ -1,15 +1,13 @@
-#menu_bar
-  #menu
-    .logo= link_to (image_tag 'LogoBerner.png'), root_url
-    .links 
-      = link_to "Home", root_url
-      = link_to "News", news_path
-      = link_to "Team", team_path
-      = link_to "Material", material_path
-      = link_to "Bilder", bilder_path
-    #social_bar
-      .social= link_to (image_tag ('twitter24.png')), "http://twitter.com/#!/teambernerbikes", {:title => "team.berner-bikes.com on twitter"}
-      .social= link_to (image_tag ('facebook24.png')), "http://www.facebook.com/pages/TeamBERNER-Bikescom/155719894472874", {:title => "team.berner-bikes.com on facebook"}
-      <!-- .social= link_to (image_tag ('google24.png')), coming_path, {:title => "team.berner-bikes.com on Google+"} -->
-      .social= link_to (image_tag ('rss24.png')), feed_path, {:title => "team.berner-bikes.com Atom feed", :alt => 'Atom feed', :class => "feed"}
+#menu
+  .logo= link_to (image_tag 'LogoBerner.png'), root_url
+  .links 
+    = link_to "Home", root_url
+    = link_to "News", news_path
+    = link_to "Team", team_path
+    = link_to "Material", material_path
+    = link_to "Bilder", bilder_path
+  #social_bar
+    .social= link_to (image_tag ('twitter24.png')), "http://twitter.com/#!/teambernerbikes", {:title => "team.berner-bikes.com on twitter"}
+    .social= link_to (image_tag ('facebook24.png')), "http://www.facebook.com/pages/TeamBERNER-Bikescom/155719894472874", {:title => "team.berner-bikes.com on facebook"}
+    .social= link_to (image_tag ('rss24.png')), feed_path, {:title => "team.berner-bikes.com Atom feed", :alt => 'Atom feed', :class => "feed"}
     

@@ -2,25 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-# $ -> 
-#   $('#rotator.slide:first').siblings('.slide').hide()
-
-#   speed = 2000
-#   pause = false  
-#   news_slide = $('#rotator.slide:first')
-  
-#   slideshow = (slide) ->
-#     setTimeout( => 
-#       if slide.next('.slide').length
-#         next_slide = slide.next('.slide')
-#       else
-#         next_slide = $('.slide:first')
-#       slide.hide()
-#       next_slide.fadeIn(500)
-#       slideshow next_slide
-#     , speed*2)
-
-#   slideshow(news_slide)
 $ ->
   $('.rotator').cycle({
     fx: 'scrollLeft',

@@ -195,7 +195,7 @@ function handleArguments(cont, options, arg2) {
 };
 
 function removeFilter(el, opts) {
-	if (!$.support.opacity && opts.cleartype && el.style.filter) {
+	if (!$.support.opacity && opts.cleartype && el.style.filter && style) {
 		try { el.style.removeAttribute('filter'); }
 		catch(smother) {} // handle old opera versions
 	}
