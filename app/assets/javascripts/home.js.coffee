@@ -30,3 +30,8 @@ $ ->
     pause: 1,
     delay: -4000
     })  
+  $('#rentabike').cycle({
+    fx: 'fade',
+    pause: 1,
+    delay: -100
+    })  

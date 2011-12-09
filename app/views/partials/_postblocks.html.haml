@@ -13,7 +13,7 @@
             =post.user.name
         %h1.block_header= link_to post.title, post_url(post.id)
         =link_to (image_tag post.image(:thumb).to_s), post_url(post.id)
-        %p= simple_format(preview(post.body))
+        = simple_format(preview(post.body))
         = link_to 'mehr', post_url(post.id)
   #headlines
     - @posts.where(:topnews => false).order_by([:date_published, :desc]).take(6).each do |post|
