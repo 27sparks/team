@@ -382,9 +382,14 @@ article.material {
 .rotator{
 	@include rounded-5px;
 	height: 400px;
+	width: 720px;
 	overflow: hidden;
 	background: #000;
 	margin-bottom: 30px;
+	.slidecontainer {
+		height: 400px;
+		width: 720px;
+	}
 }
 #riderslideshow, #galleryslideshow {
 	width: 220px;
