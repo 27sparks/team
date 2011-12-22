@@ -1,17 +1,20 @@
 #header, #footer {
 	background-image: url(menu.png);
+	background-repeat: no-repeat;
 	width: 1000px;
 	height: 36px;
 	border: 0px solid #000;
 }
 #content h1.section_header {
 	background-image: url(title.png);
+	background-repeat: no-repeat;
 	width: 720px;
 	height: 36px;
 	border: 0px solid #000;
 }
 #bottom_row h1.section_header {
 	background-image: url(title_small.png);
+	background-repeat: no-repeat;
 	width: 220px;
 	height: 36px;
 	border: 0px solid #000;
