@@ -59,6 +59,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+
   end
 
   # POST /posts
@@ -79,8 +80,10 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
+    id = Post.find(params[:id])._id
+    
     respond_to do |format|
-      if @post.update_attributes(params[:post])
+      if ((@post.update_attributes(params[:post])) && (@post._id = id))
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :ok }
       else
