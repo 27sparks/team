@@ -15,7 +15,7 @@ class Post
   field :date_published, :type => Date
   field :second_image
   field :second_image_tag
-
+  
   key :title
 
   validates :title, :presence => true
