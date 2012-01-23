@@ -89,7 +89,7 @@ GEM
     mime-types (1.17.2)
     mongo (1.5.2)
       bson (= 1.5.2)
-    mongoid (2.4.1)
+    mongoid (2.4.2)
       activemodel (~> 3.1)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
@@ -115,7 +115,7 @@ GEM
       rack
       rake (>= 0.8.1)
     polyglot (0.3.3)
-    rack (1.4.0)
+    rack (1.4.1)
     rack-cache (1.1)
       rack (>= 0.4)
     rack-ssl (1.3.2)
@@ -168,8 +168,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (~> 3.0.0)
-  bson_ext (~> 1.4)
+  bcrypt-ruby
+  bson_ext
   cancan
   capistrano
   coffee-rails
@@ -178,7 +178,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   koala
-  mongoid (~> 2.3)
+  mongoid
   mongoid-paperclip
   passenger
   rails (= 3.2.0)
@@ -187,4 +187,4 @@ DEPENDENCIES
   sass-rails
   therubyracer
   turn
-  uglifier (>= 1.0.3)
+  uglifier
